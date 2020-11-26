@@ -16,6 +16,9 @@
 	box-sizing: content-box;
 	font-family: 'PingFang SC','SF Pro Display','Microsoft YaHei',Roboto,Noto,Arial,sans-serif;
 }
+#csdn-toolbar .toolbar-container>*{
+	flex: none;
+}
 #csdn-toolbar a{
 	text-decoration: none;
 }
@@ -192,4 +195,150 @@ margin-right: 16px;
 	position: absolute;
 	right: 16px;
 	top: 6px;
+}
+
+#csdn-toolbar .toolbar-btns{
+	height: 100%;
+}
+#csdn-toolbar .csdn-toolbar-fr{
+	float: right;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn{
+	margin-right: 8px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-write{
+	height: 100%;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-write>a{
+	display: block;
+	min-width: 96px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(92deg,#ffba40 0,#ff503e 37%,#ff2f50 81%,#ff1b40 100%);
+	border-radius: 16px;
+	margin-top: calc((44px - 32px)/ 2);
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-write>a:hover{
+	background: -webkit-gradient(linear,left top,right top,from(#ff9a01),color-stop(34%,#ff503e),color-stop(66%,#ff2b36),to(#ff1b40));
+    background: linear-gradient(90deg,#ff9a01 0,#ff503e 34%,#ff2b36 66%,#ff1b40 100%);
+
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-write>a i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	vertical-align: middle;
+	background: url(../../img/csdn/16-16@2x.png) no-repeat -32px -16px;
+    background-size: 300%;
+    top: -1px;
+    margin-right: 4px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-collect{
+	width: 48px;
+	height: 44px;
+	line-height: 44px;
+	color: inherit;
+	text-align: center;
+	margin-right: 0;
+}
+#csdn-toolbar .toolbar-btns .toolbar-subMenu{
+	background: #fff;
+}
+
+#csdn-toolbar .toolbar-btns .toolbar-subMenu>a{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 24px;
+	text-align: left;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-msg #toolbar-remind{
+display: block;
+width: 48px;
+height: 44px;	
+line-height: 44px;
+color: inherit;
+text-align: center;
+position: relative;
+}
+
+
+#csdn-toolbar .toolbar-btns .toolbar-btn-login{
+	height: 100%;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu{
+	width: 144px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login>a{
+	display: block;
+	color: #20232c;
+	line-height: 44px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login>a.hasAvatar{
+	margin-top: calc((44px - 32px)/ 2);
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login>a img{
+	display: block;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+}
+.toolbar-icon {
+    fill: currentColor;
+    overflow: hidden;
+}
+
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: -1px;
+	margin-right: 8px;
+	vertical-align: middle;
+	background: url(../../img/csdn/16-16@2x.png);
+	background-repeat: no-repeat;
+	background-size: 300%;
+	background-position-x: 0;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-follow{
+	background-position-y: 0;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-collect{
+	background-position-y: -16px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-profile{
+	background-position-y: -32px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-account{
+	background-position-y: -48px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-blog{
+	background-position-y: -64px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-mp{
+	background-position-y: -80px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-edu{
+	background-position-y: -96px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-download{
+	background-position-y: -112px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-book{
+	background-position-y: -224px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-wallet{
+	background-position-y: -128px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-order{
+	background-position-y: -144px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-help{
+	background-position-y: -160px;
+}
+#csdn-toolbar .toolbar-btns .toolbar-btn-login .toolbar-subMenu i.toolbar-icon-logout{
+	background-position-y: -176px;
 }

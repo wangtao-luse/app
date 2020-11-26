@@ -25,6 +25,17 @@ a, a:focus, button, button:focus {
 a {
     text-decoration: none;
 }
+em, i {
+    font-style: normal;
+}
 input{
 	outline: none;
+}
+.clearfix:after{
+	content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    clear: both;
 }
