@@ -1,0 +1,114 @@
+.wrapper{
+	width: 1200px;
+	margin: 20px auto;
+}
+#csdn a{
+	text-decoration: none;
+}
+#csdn .btn-writer{
+	display: block;
+	width: 96px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(92deg,#ffba40 0,#ff503e 37%,#ff2f50 81%,#ff1b40 100%);
+    border-radius: 16px;
+}
+#csdn .btn-writer:hover{
+	background: -webkit-gradient(linear,left top,right top,from(#ff9a01),color-stop(34%,#ff503e),color-stop(66%,#ff2b36),to(#ff1b40));
+    background: linear-gradient(90deg,#ff9a01 0,#ff503e 34%,#ff2b36 66%,#ff1b40 100%);
+
+}
+#csdn .btn-writer i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: -1px;
+	margin-right: 4px;
+	vertical-align: middle;
+	background: url(../../img/csdn/16-16@2x.png) no-repeat -32px -16px;
+	background-size: 300%;
+}
+
+#csdn .save-btn{
+	margin-right: 6px;
+	padding: 0 16px;	
+	font-size: 16px;
+	color: #e33e33;
+	border: 1px solid #e33e33;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 4px;
+	background-color: #fff;	
+	cursor: pointer;
+	white-space: nowrap;
+	text-align: center;
+}
+#csdn .save-btn:hover{
+	background-color: #fde3e4;
+}
+#csdn .btn-publish{
+	padding: 0 16px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    white-space: nowrap;
+    background-color: #e33e33;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+#csdn .btn-publish:hover{
+	background-color: #f66;
+}
+
+#zhihu button{
+	margin: 0;
+}
+#zhihu .btn{
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+	background: none;
+	border: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#zhihu .button{
+	display: inline-block ;
+	padding: 0 16px;
+	line-height: 32px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid;
+	border-radius: 3px;
+	color: #8590a6;
+}
+#zhihu .btn--blue{
+	color: #0084ff;
+    border-color: #0084ff
+}
+#zhihu .ask-button{
+	color: #fff;
+	background-color: #0084ff;
+	padding: 0 14px;
+	line-height: 30px;
+	transition: opacity 0.3s ease,transform .03s ease,-webkit-transform 0.3s ease;
+}
+#zhihu .btn--blue:hover{
+	background-color:  rgba(0,132,255,0.06);
+}
+#zhihu .ask-button:hover{
+	border-color: #0077e6;
+    background-color: #0077e6;
+}
+
