@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.setting-group__cover:hover .select-cover-btn{
+				background-color: #f6f8f9;
+			}
+			.select-cover-btn{
+				display: block;
+				width: 211.5px;
+				height: 90px;
+				box-sizing: border-box;
+				border: 2px dashed #EBEBEB;
+				color: #07c160;
+				text-align: center;
+				padding-top: 16px;
+				-webkit-transition: all 0.1s;
+    			transition: all 0.1s;
+			}
+			.icon-add_css{
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				position: relative;
+			}
+			.icon-add_css:before{
+				content: "";
+				display: block;
+				width: 20px;
+				height: 2px;
+				background-color: #07c160;
+				position: absolute;
+				top: 11px;
+				left: 2px;
+			}
+			.icon-add_css:after{
+				content: "";
+				display: block;
+				width: 2px;
+				height: 20px;
+				background-color: #07c160;
+				position: absolute;
+				top: 2px;
+				left: 11px;
+				
+			}
+			.btn-text{
+				display: block;
+			}
+			.setting-group__cover:hover .pop-opr__group {
+			    opacity: 1;
+			    visibility: visible;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="js-cover-area" class="setting-group__cover">
+			<div class="select-cover-btn js-cover-btn-area">
+				<i class="icon-add_css"></i>
+				<span class="btn-text">选择封面</span>
+			</div>
+			<div class="select-cover-preview js_cover_preview" style="display: none;">
+				<div class="pop-opr__group js_cover_opr js_cover_btn_area">
+					<ul class="pop-opr__list">
+						<li class="pop-opr__item">
+							<a href="#" class="pop-opr__button">从正文选择</a>
+						</li>
+						<li class="pop-opr__item">
+							<a href="#" class="pop-opr__button">从图片库选择</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
