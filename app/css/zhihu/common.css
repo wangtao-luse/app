@@ -10,6 +10,9 @@ body,button,p,ul,ol{
 	padding: 0;
 	margin: 0;
 }
+.button{
+	color:#8590a6;
+}
 li{
 	list-style-type: none;
 }
