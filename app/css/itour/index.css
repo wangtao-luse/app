@@ -1,0 +1,21 @@
+#itour-banner{
+	font-size: 14px;
+	font-weight: normal;
+	color: #20232c;
+	background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+    position: relative;
+}
+#itour-banner .banner-container{
+	width: 1000px;
+	height: 54px;
+	margin: 0 auto;
+}
+#itour-banner .banner-logo{
+	max-width: 80px;
+	height: 100%;
+}
+#itour-banner .banner-logo img{
+	display: block;
+	width: 96px;
+}
