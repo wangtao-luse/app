@@ -1,4 +1,10 @@
-html,body,div,h1,h2,h3,h4,h5,h6,a,ul,ol,li,dl,dt,dd,em,i,img,form{
+html,body,div,h1,h2,h3,h4,h5,h6,a,ul,ol,li,dl,dt,dd,em,i,img,p,form,input,button{
 	padding: 0;
 	margin: 0;
+}
+body{
+	background: #f5f6f7;
+}
+a, button, input, textarea {
+    outline: none;
 }
