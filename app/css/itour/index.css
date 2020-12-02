@@ -145,6 +145,7 @@ float: left;
 #itour-banner .toolbar-subMenu-box{
 	position: relative;
 }
+
 #itour-banner .toolbar-subMenu-box .toolbar-subMenu{
 	position: absolute;
 	display: none;
@@ -178,4 +179,81 @@ float: left;
 	color: inherit;
 	text-align: center;
 	margin-right: 0;
+}
+
+#itour-banner .banner-btns .banner-btn-msg .toolbar-subMenu-box{
+	width: 100%;
+    height: 100%;
+}
+#itour-banner .banner-btns .banner-btn-msg .toolbar-subMenu-box>a{
+	display: block;
+	width: 48px;
+	height: 44px;
+	line-height: 44px;
+	color: inherit;
+	position: relative;
+	text-align: center;
+	
+}
+#itour-banner .banner-btns .toolbar-subMenu{
+	background: #fff;
+	
+}
+#itour-banner .banner-btns .toolbar-subMenu>a{
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	padding-left: 24px;
+}
+#itour-banner .banner-btns .banner-btn-msg .toolbar-subMenu{
+	width: 120px;
+}
+#itour-banner .banner-btns .banner-btn-login{
+	height: 100%;
+}
+#itour-banner .banner-btns .banner-btn-login>a{
+	display: block;
+    color: #20232c;
+    line-height: 44px;
+}
+#itour-banner .banner-btns .banner-btn-login>a.hasAvatar{
+	margin-top: calc((44px - 32px)/2);
+}
+#itour-banner .banner-btns .banner-btn-login>a img{
+	display: block;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	
+}
+#itour-banner .banner-btns .banner-btn-login .toolbar-subMenu{
+	width: 144px;
+}
+#itour-banner .banner-btns .banner-btn-login .toolbar-subMenu a i.banner-icon{
+display: inline-block;
+width: 16px;
+height: 16px;
+position: relative;
+margin-right: 8px;
+top: -1px;
+vertical-align: middle;
+background: url(../../img/csdn/16-16@2x.png);
+background-repeat: no-repeat;
+background-size: 300%;
+background-position-x: 0;	
+}
+#itour-banner .banner-btns .banner-btn-login .toolbar-subMenu a i.banner-icon-profile{
+	background-position-y: -32px;
+}
+#itour-banner .banner-btns .banner-btn-login .toolbar-subMenu a i.banner-icon-account{
+	background-position-y: -48px;
+}
+#itour-banner .banner-btns .banner-btn-login .toolbar-subMenu a i.banner-icon-mp{
+	background-position-y: -80px;
+}
+#itour-banner .banner-btns .banner-btn-login .toolbar-subMenu a i.banner-icon-blog{
+	background-position-y: -64px;
+}
+#itour-banner .banner-btns .banner-btn-login .toolbar-subMenu a i.banner-icon-logout{
+	background-position-y: -176px;
 }
