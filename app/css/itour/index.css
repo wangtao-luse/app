@@ -257,3 +257,12 @@ background-position-x: 0;
 #itour-banner .banner-btns .banner-btn-login .toolbar-subMenu a i.banner-icon-logout{
 	background-position-y: -176px;
 }
+#itour-banner .banner-btns .banner-btn-login>a{
+	display: inline-block;
+	width: 48px;
+	line-height: 44px;
+	color: #20232c;
+	text-align: center;
+	
+	
+}
