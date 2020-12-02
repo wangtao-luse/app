@@ -1,6 +1,8 @@
 body{
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
 	font-size: 15px;
 	color: #121212;
+	background: #f6f6f6;
 }
 a{
 	color: inherit;
@@ -15,4 +17,18 @@ body,button,p,ul,ol{
 }
 li{
 	list-style-type: none;
+}
+h1, h2, h3 {
+    margin: 0;
+    font: inherit;
+}
+@media (min-width: 690px)
+.richContent.is-collapsed {
+    cursor: pointer;
+    -webkit-transition: color 0.14s ease-out;
+    transition: color 0.14s ease-out;
+}
+@media (min-width: 690px)
+.richContent.is-collapsed .copyrightRichText-richText {
+    pointer-events: none;
 }
