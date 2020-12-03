@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.mt20{
+				margin-top: 20px;
+			}
+			.file-wrapper{
+				border: 2px dashed #dcdcdc;
+				width: 146px;
+				height: 112px;
+			}			
+			.upload-btn{
+				width: 148px;
+				height: 38px;
+				line-height: 38px;
+				color: #ff6d10;
+				border: 1px solid #ff6d10;
+				background: #fff;
+				overflow: hidden;
+				position: relative;
+				z-index: 3;
+				text-align: center;
+			}
+			.upload-btn:hover{
+				color: #fff;
+				background-color: #ff6d10;
+			}
+			
+			.move-file{
+				width: 148px;
+				height: 38px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				filter: alpha(opacity=0);
+				-moz-opacity: 0;
+				opacity: 0;
+				cursor: pointer;
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="file-wrapper"></div>
+		<div class="upload-btn mt20">
+			<span>上传图片</span>
+			<input type="file" class="move-file" />
+		</div>
+		<div class="mt20">
+			<input type="file" />
+		</div>
+	</body>
+</html>

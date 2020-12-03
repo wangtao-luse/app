@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		  
+			.textarea-box{
+				display: block;
+				box-sizing: border-box;
+				width: 288px;
+				height: 90px;
+				padding:4px 0 20px 10px;
+				position: relative;
+				font-size: 14px;
+				border: 1px solid #e7e7eb;
+				background: #fff;
+				
+			}
+			textarea{
+				font-size: inherit;
+				font-size: 100%;
+				overflow: hidden;
+				vertical-align: top;
+			     margin: 0;
+				outline: none;
+				resize: none;
+				overflow-y: auto;
+			}
+			.frm_textarea{
+				width: 100%;
+				height: 100%;
+				background: transparent;
+				border: 0;
+				
+			}
+			.frm_input_append.frm_counter{
+				position: absolute;
+				height: 20px;
+				line-height: 14px;
+				right: 10px;
+				bottom: 0;
+				color: #9a9a9a;
+			    font-size: 14px;
+			    font-weight: 400;
+			    font-style: normal
+			}
+			.mt20{
+				margin-top:20px ;
+			}
+		</style>
+	</head>
+	<body>
+		<textarea></textarea>
+		
+		
+		<div class="textarea-wrap mt20">
+			<span class="textarea-box">
+				<textarea id="js-descripton" class="frm_textarea" maxlength="120" placeholder="选填，摘要会在订阅号消息、转发链接等文章外的场景显露，帮助读者快速了解内容，如不填写则默认抓取正文前54字"></textarea>
+			    <em class="frm_input_append frm_counter">1/120</em>
+			</span>
+		</div>
+	</body>
+</html>
