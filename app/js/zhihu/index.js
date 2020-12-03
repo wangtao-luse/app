@@ -26,4 +26,15 @@ $(function(){
 		$(".app-searchBar .searchBar-tool").removeClass("searchBar-tool-focus");
 		$("#popover-searchBar-content").hide();
 	});
+	
+	$(".pc-feedAd-container .advert-signpc-label").click(function(e){
+		var has = $(".pc-feedAd-container .advert-signpc-popup").hasClass("advert-signpc-popup--isHidden");
+		if(has){
+			$(".pc-feedAd-container .advert-signpc-popup").removeClass("advert-signpc-popup--isHidden");
+		}
+		$(document).one("click", function(){
+        $(".pc-feedAd-container .advert-signpc-popup").addClass("advert-signpc-popup--isHidden");
+      });
+       e.stopPropagation();
+	})
 })

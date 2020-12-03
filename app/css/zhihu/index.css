@@ -493,6 +493,10 @@ padding: 16px 20px;
 .topstoryItem-isRecommend{
 	padding: 20px;
 }
+.topstory-mainColunm .topstoryItem--advertCard{
+	padding: 0;
+	border-bottom: none;
+}
 .topstory-mainColunm .card:not(.topstory-tabCard){
 	margin-bottom: 0;
 	-webkit-box-shadow: none;
@@ -642,6 +646,192 @@ overflow: hidden;
 }
 .button--withIcon.button--withLabel .button-zi {
     margin-right: 4px;
+}
+.pc-feedAd-container{
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+}
+.pc-feedAd{
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.pc-feedAd-card{
+	position: relative;
+}
+.pc-feedAd-card-brand{
+	margin-bottom: 11px;
+}
+.pc-feedAd-card-brand-wrapper{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.pc-feedAd-card-brand-wrapper>img{
+	width: 24px;
+    height: 24px;
+    border-radius: 1px;
+    background: #fff;
+}
+.pc-feedAd-card-brand--bold{
+	font-weight: 600;
+	line-height: 24px;
+}
+.pc-feedAd-card-brand-wrapper>span{
+	margin-left: 12px;
+	color: #444;
+	font-size: 16px;
+	line-height: 24px;
+}
+.pc-feedAd-card-brand-metaText{
+	color: #8590a6;
+    line-height: 24px;
+}
+.advert-signpc-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 3px 6px;
+    border-radius: 3px;
+    color: #8590a6;
+    background: #f6f6f6;
+    font-size: 13px;
+    cursor: pointer;
+}
+.advert-signpc-label>svg {
+    width: 24px;
+    height: 24px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    fill: #8590a6;
+}
+.advert-signpc-popup{
+	position: fixed;
+	border: 1px solid #EBEBEB;
+	border-radius: 4px;
+	background: #fff;
+	-webkit-box-shadow: 0 5px 20px rgba(26,26,26,.1);
+    box-shadow: 0 5px 20px rgba(26,26,26,.1);
+    z-index: 999;
+}
+.advert-signpc-popup--isHidden {
+    display: none;
+}
+.advert-signpc-popup-arrow {
+    position: absolute;
+    left: 60px;
+    width: 32px;
+    height: 16px;
+    overflow: hidden;
+    -webkit-transform: translate(-50%,-100%);
+    transform: translate(-50%,-100%);
+}
+.advert-signpc-popup-arrow:after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ebebeb;
+    margin: -12px;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+}
+.advert-signpc-popup-menu {
+    min-width: 124px;
+    padding: 6px 0;
+}
+.advert-signpc-popup-menu>button, .advert-signpc-popup-menu a {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    border-radius: 0;
+    color: #8590a6;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: left;
+    cursor: pointer;
+}
+.pc-feedAd-card-title{
+	margin: 0;
+    color: #121212;
+    font-weight: 600;
+    font-size: 18px;
+}
+.pc-feedAd-card-content{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 12px;
+    color: #121212;
+    line-height: 1.67;
+    word-break: break-all;
+}
+.advertImg {
+    position: relative;
+    background-color: #f6f6f6;
+}
+.advertImg--isLoaded {
+    background-color: transparent;
+}
+.pc-feedAd-card-content-cover {
+    width: 190px;
+    height: 105px;
+    border-radius: 4px;
+    margin-top: 4px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.advertImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    vertical-align: top;
+    text-indent: -9999px;
+    -webkit-transition: opacity .5s linear;
+    transition: opacity .5s linear;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.advertImg--isLoaded img {
+    opacity: 1;
+}
+.pc-feedAd-card-content-detail {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    margin-left: 18px;
+    line-height: 24px;
+    word-break: break-all;
+}
+.pc-feedAd-card-content-detail-cta {
+    display: inline-block;
+    padding: 0 3px;
+    color: #8590a6;
+    font-size: 14px;
+}
+.pc-feedAd-card-content-detail-svg {
+    width: 24px;
+    height: 24px;
+    fill: #8590a6;
 }
 .globalSideBar{
 	-webkit-box-flex: 1;
