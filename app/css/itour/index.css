@@ -466,6 +466,12 @@ overflow: hidden;
 	background: #fff;
 	clear: both;
 }
+.contentItem-actions .avatar img{
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+}
 .contentItem-actions>*{
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
@@ -474,6 +480,7 @@ overflow: hidden;
 	margin-left: 24px;
 	font-size: 14px;
 }
+
 .contentItem-action svg:hover {
 	fill: #0084FF;
 }
@@ -734,7 +741,6 @@ overflow: hidden;
 
 .wechat-follow-wrap {
     padding: 20px;
-    margin-top: 10px;
 }
 .wechat-follow-title {
     border-bottom: 2px solid #dcdcdc;
@@ -774,4 +780,24 @@ overflow: hidden;
 #footer .copyright{
 	text-align: center;
 	font-size: 13px;
+}
+/**footer end**/
+/**回到顶部**/
+#fixedTools {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background: #FFF;
+    width: 36px;
+    text-align: center;
+    border-radius: 2px;
+    line-height: 1.25;
+    z-index: 1000;
+}
+#fixedTools a {
+    padding: 10px;
+    border: 1px solid #DDD;
+    display: block;
+    color: #999;
+    text-decoration: none;
 }
