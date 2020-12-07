@@ -64,6 +64,10 @@ h1, h2, h3 {
     margin: 0;
     font: inherit;
 }
+.avatar{
+	background: #fff;
+	border-radius: 50%;
+}
 @media (min-width: 690px)
 .richContent.is-collapsed {
     cursor: pointer;
