@@ -4,6 +4,10 @@ html,body,div,h1,h2,h3,h4,h5,h6,a,ul,ol,li,dl,dt,dd,em,i,img,p,form,input,button
 }
 body{
 	background: #f5f6f7;
+	font-size: 15px;
+	color: #121212;
+	
+	
 }
 body,button,p,ul,ol,dl,dt,dd{
 	padding: 0;
