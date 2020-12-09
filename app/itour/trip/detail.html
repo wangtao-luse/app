@@ -168,6 +168,33 @@
 									</div>
 								</div>
 								<div>
+									<div class="comment-box comment-edit-box">
+										<div class="user-img">
+											<img  class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
+										</div>
+									    <form id="comment-form">
+									    	<textarea class="comment-content" id="comment_content" maxlength="1000"placeholder="快来写下你的评论..."></textarea>
+									    	<div class="opt-box">
+									    		<input type="hidden" id="comment_replyId" />
+									    		<input type="hidden" id="article_id" />
+									    		<input type="hidden" id="comment_userId" />
+									    		<input type="hidden" id="commentId" />
+									    		<div class="right-box">
+									    			<span id="tip_comment" class="tip">
+									    				还能输入
+									    				<em>987</em>
+									    				个字符
+									    			</span>									    			
+									    			<a href="#">
+									    				<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
+									    			</a>
+									    		</div>
+									    		
+									    	</div>
+									    </form>
+									</div>
+								</div>
+								<div>
 									<div class="commentListV2">
 										<ul class="nestComment">
 											<li class="nestComment--rootComment">
@@ -211,27 +238,41 @@
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
+																	删除
+																</button>
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
 																	举报
 																</button>
 																
 															</div>
-														    <div class="commentItemV2-editor commentEditorV2--normal commentEditorV2--active">
-														    	<div class="commentEditorV2-inputWrap commentEditorV2-inputWrap--change commentEditorV2-inputWrap--active">
-														    		<div class="inputLike commentEditorV2-input editable">
-														    			<div class="dropzone editable-content richText richText--editable richText--clearBoth ztext">
-														    				<div class="draftEditor-root">
-														    					<div class="public-DraftEditorPlaceholder-root">
-														    						<div class="public-DraftEditorPlaceholder-inner">回复王三天</div>
-														    					</div>
-														    				    <div class="draftEditor-editorContainer">
-														    				    	<div class="notranslate public-DraftEditor-content"></div>
-														    				    </div>
-														    				</div>
-														    			</div>
-														    		</div>														    		
-														    	</div>
-														        <button type="button" class="button commentEditorV2-singleButton button--primary button--blue"></button>
-														    </div>
+														    <div class="comment-box comment-edit-box">
+																<div class="user-img">
+																	<img  class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
+																</div>
+															    <form id="commentformNew">
+															    	<textarea class="comment-content" id="comment_contentNew" maxlength="1000"placeholder="回复：王天三"></textarea>
+															    	<div class="opt-box">
+															    		<input type="hidden" id="comment_replyIdNew" />
+															    		<input type="hidden" id="article_idNew" />
+															    		<input type="hidden" id="comment_userIdNew" />
+															    		<input type="hidden" id="commentIdNew" />
+															    		<div class="right-box right-box-new">
+															    			<span id="tip_commentNew" class="tip">
+															    				还能输入
+															    				<em>987</em>
+															    				个字符
+															    			</span>	
+															    			<input type="button" class="btn btn-sm btn-cancel" value="取消评论">
+															    			<a href="#">
+															    				<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
+															    			</a>
+															    		</div>
+															    		
+															    	</div>
+															    </form>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -552,7 +593,7 @@
 										</ul>
 									</div>
 								</div>
-								<div></div>
+								
 							</div>
 						</div>
 	    			</div>

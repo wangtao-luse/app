@@ -16,5 +16,11 @@ $(function(){
 		$(this).find(".isactive").css("display","none");
 	});
 	
+	$("#comment_content,#comment_contentNew").focus(function(){
+		$(this).addClass("open");
+	});
+	$("#comment_content").blur(function(){
+		$(this).removeClass("open");
+	});
 	
 })
