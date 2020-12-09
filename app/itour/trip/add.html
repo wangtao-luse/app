@@ -26,19 +26,39 @@
 		</script>
 	</head>
 	<body>
-		<div class="itour-baner">
+		<!--头部-->
+		<div class="head-container">
 			
 		</div>
-		 
-		<div class="itour-main>
-			<div class="article-title-container">
-				<div class="artcle-tilte">
-					<input type="text" class="article-title-input" placeholder="请输入标题"/>
+		<article>
+			<!--标题-->
+			<div class="article-container">
+				<div class="article-title-box">
+					<input type="text" />
 				</div>
 			</div>
-			<div class="edit-container container article-content">
-				<div  class="edit-mod-container">
-				  <div id="edit-md-area"></div>	
+			<!--编辑器-->
+			<div  class="edit-mod-container">
+			  <div id="edit-md-area"></div>	
+			</div>			
+		</article>
+	    <!--文章设置-->
+		<div id="article_setting_area" class="appsmg-editor__after-area">
+			<div id="js_cover_description_area" class="appmsg-editor__setting-group">
+				<div class="setting-group__title">封面和摘要</div>
+				<div class="setting-group__content setting-group__content_main">
+					<div class="js_cover_area" class="setting-group__cover setting-group__cover_primary">
+						<div class="select-cover__btn js_cover_btn_area">
+							<i class="icon-add_css"></i>
+							<span class="btn-text"></span>
+						</div>
+					</div>
+					<div id="js_description_area" class="setting-group__abstract js_desc_area">
+						<span id="js_description_span" class="frm_textarea_box with_counter counter_in append count">
+							<textarea id="js_description" placeholder="选填，摘要会在订阅号消息、转发链接等文章外的场景显露，帮助读者快速了解内容，如不填写则默认抓取正文前80字" maxlength="120"></textarea>
+							<em class="frm_input_append frm_counter">1/120</em>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
