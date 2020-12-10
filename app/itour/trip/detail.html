@@ -76,7 +76,7 @@
 	    	<div class="topstory">
 	    		<div class="topstory-container">
 	    			<div class="topstory-mainColunm">
-	    				<div class="topstory-content">
+	    				<div class="topstory-content topstory-mainColumnCard">
 	    					<div class="card storyCard">
 	    						<div class="contentItem storyItem-isAnswer">
 	    							<div class="contentItem-meta">
@@ -168,6 +168,33 @@
 									</div>
 								</div>
 								<div>
+									<div class="comment-box comment-edit-box">
+										<div class="user-img">
+											<img  class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
+										</div>
+									    <form id="comment-form">
+									    	<textarea class="comment-content" id="comment_content" maxlength="1000"placeholder="快来写下你的评论..."></textarea>
+									    	<div class="opt-box">
+									    		<input type="hidden" id="comment_replyId" />
+									    		<input type="hidden" id="article_id" />
+									    		<input type="hidden" id="comment_userId" />
+									    		<input type="hidden" id="commentId" />
+									    		<div class="right-box">
+									    			<span id="tip_comment" class="tip">
+									    				还能输入
+									    				<em>987</em>
+									    				个字符
+									    			</span>									    			
+									    			<a href="#">
+									    				<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
+									    			</a>
+									    		</div>
+									    		
+									    	</div>
+									    </form>
+									</div>
+								</div>
+								<div>
 									<div class="commentListV2">
 										<ul class="nestComment">
 											<li class="nestComment--rootComment">
@@ -196,49 +223,56 @@
 															</div>
 															<div class="commentItemV2-footer">
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
-																	<span>
-																		<svg class="Zi Zi--Like" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M14.445 9h5.387s2.997.154 1.95 3.669c-.168.51-2.346 6.911-2.346 6.911s-.763 1.416-2.86 1.416H8.989c-1.498 0-2.005-.896-1.989-2v-7.998c0-.987.336-2.032 1.114-2.639 4.45-3.773 3.436-4.597 4.45-5.83.985-1.13 3.2-.5 3.037 2.362C15.201 7.397 14.445 9 14.445 9zM3 9h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1z" fill-rule="evenodd"></path></svg>
-																	</span>
-																	44
+																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
+																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
+																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
+																	</span>44	
+																	
 																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
-																		<svg class="Zi Zi--Reply" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M22.959 17.22c-1.686-3.552-5.128-8.062-11.636-8.65-.539-.053-1.376-.436-1.376-1.561V4.678c0-.521-.635-.915-1.116-.521L1.469 10.67a1.506 1.506 0 0 0-.1 2.08s6.99 6.818 7.443 7.114c.453.295 1.136.124 1.135-.501V17a1.525 1.525 0 0 1 1.532-1.466c1.186-.139 7.597-.077 10.33 2.396 0 0 .396.257.536.257.892 0 .614-.967.614-.967z" fill-rule="evenodd"></path></svg>
 																	</span>
 																	回复
 																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
+																
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
-																		<svg class="Zi Zi--Like" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="transform: rotate(180deg); margin-right: 5px;"><path d="M14.445 9h5.387s2.997.154 1.95 3.669c-.168.51-2.346 6.911-2.346 6.911s-.763 1.416-2.86 1.416H8.989c-1.498 0-2.005-.896-1.989-2v-7.998c0-.987.336-2.032 1.114-2.639 4.45-3.773 3.436-4.597 4.45-5.83.985-1.13 3.2-.5 3.037 2.362C15.201 7.397 14.445 9 14.445 9zM3 9h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1z" fill-rule="evenodd"></path></svg>
 																	</span>
-																	踩
+																	删除
 																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
-																		<svg class="Zi Zi--Report" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M19.947 3.129c-.633.136-3.927.639-5.697.385-3.133-.45-4.776-2.54-9.949-.888-.997.413-1.277 1.038-1.277 2.019L3 20.808c0 .3.101.54.304.718a.97.97 0 0 0 .73.304c.275 0 .519-.102.73-.304.202-.179.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V3.964c0-.599-.42-.972-1.053-.835z" fill-rule="evenodd"></path></svg>
 																	</span>
 																	举报
 																</button>
 																
 															</div>
-														    <div class="commentItemV2-editor commentEditorV2--normal commentEditorV2--active">
-														    	<div class="commentEditorV2-inputWrap commentEditorV2-inputWrap--active">
-														    		<div class="inputLike commentEditorV2-input editable">
-														    			<div class="dropzone editable-content richText richText--editable richText--clearBoth ztext">
-														    				<div class="draftEditor-root">
-														    					<div class="public-DraftEditorPlaceholder-root">
-														    						<div class="public-DraftEditorPlaceholder-inner">回复王三天</div>
-														    					</div>
-														    				    <div class="draftEditor-editorContainer">
-														    				    	<div class="notranslate public-DraftEditor-content"></div>
-														    				    </div>
-														    				</div>
-														    			</div>
-														    		</div>
-														    		<div class="commentEditorV2-inputUpload"></div>
-														    	</div>
-														        <button type="button" class="button commentEditorV2-singleButton button--primary button--blue"></button>
-														    </div>
+														    <div class="comment-box comment-edit-box">
+																<div class="user-img">
+																	<img  class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
+																</div>
+															    <form id="commentformNew">
+															    	<textarea class="comment-content" id="comment_contentNew" maxlength="1000"placeholder="回复：王天三"></textarea>
+															    	<div class="opt-box">
+															    		<input type="hidden" id="comment_replyIdNew" />
+															    		<input type="hidden" id="article_idNew" />
+															    		<input type="hidden" id="comment_userIdNew" />
+															    		<input type="hidden" id="commentIdNew" />
+															    		<div class="right-box right-box-new">
+															    			<span id="tip_commentNew" class="tip">
+															    				还能输入
+															    				<em>987</em>
+															    				个字符
+															    			</span>	
+															    			<input type="button" class="btn btn-sm btn-cancel" value="取消评论">
+															    			<a href="#">
+															    				<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
+															    			</a>
+															    		</div>
+															    		
+															    	</div>
+															    </form>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -251,7 +285,7 @@
 										    					<div class="popover">
 										    						<div id="popover36-toggle">
 										    							<a href="#" class="userLink-link">
-										    								<img class="avatar userLink-avatar" src="../img/zhihu/avatar-2.jpg" width="24" height="24"/>
+										    								<img class="avatar userLink-avatar" src="../../img/itour/common/avatar-2.jpg" width="24" height="24"/>
 										    							</a>
 										    						</div>
 										    					</div>
@@ -271,26 +305,20 @@
 										    				</div>
 										    				<div class="commentItemV2-footer">
 										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
-																	<span>
-																		<svg class="Zi Zi--Like" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M14.445 9h5.387s2.997.154 1.95 3.669c-.168.51-2.346 6.911-2.346 6.911s-.763 1.416-2.86 1.416H8.989c-1.498 0-2.005-.896-1.989-2v-7.998c0-.987.336-2.032 1.114-2.639 4.45-3.773 3.436-4.597 4.45-5.83.985-1.13 3.2-.5 3.037 2.362C15.201 7.397 14.445 9 14.445 9zM3 9h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1z" fill-rule="evenodd"></path></svg>
-																	</span>
-																	44
+																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
+																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
+																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
+																	</span>44	
+																	
 																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
-																		<svg class="Zi Zi--Reply" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M22.959 17.22c-1.686-3.552-5.128-8.062-11.636-8.65-.539-.053-1.376-.436-1.376-1.561V4.678c0-.521-.635-.915-1.116-.521L1.469 10.67a1.506 1.506 0 0 0-.1 2.08s6.99 6.818 7.443 7.114c.453.295 1.136.124 1.135-.501V17a1.525 1.525 0 0 1 1.532-1.466c1.186-.139 7.597-.077 10.33 2.396 0 0 .396.257.536.257.892 0 .614-.967.614-.967z" fill-rule="evenodd"></path></svg>
 																	</span>
 																	回复
 																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
+																
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
-																		<svg class="Zi Zi--Like" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="transform: rotate(180deg); margin-right: 5px;"><path d="M14.445 9h5.387s2.997.154 1.95 3.669c-.168.51-2.346 6.911-2.346 6.911s-.763 1.416-2.86 1.416H8.989c-1.498 0-2.005-.896-1.989-2v-7.998c0-.987.336-2.032 1.114-2.639 4.45-3.773 3.436-4.597 4.45-5.83.985-1.13 3.2-.5 3.037 2.362C15.201 7.397 14.445 9 14.445 9zM3 9h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1z" fill-rule="evenodd"></path></svg>
-																	</span>
-																	踩
-																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
-																	<span>
-																		<svg class="Zi Zi--Report" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M19.947 3.129c-.633.136-3.927.639-5.697.385-3.133-.45-4.776-2.54-9.949-.888-.997.413-1.277 1.038-1.277 2.019L3 20.808c0 .3.101.54.304.718a.97.97 0 0 0 .73.304c.275 0 .519-.102.73-.304.202-.179.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V3.964c0-.599-.42-.972-1.053-.835z" fill-rule="evenodd"></path></svg>
 																	</span>
 																	举报
 																</button>
@@ -307,7 +335,7 @@
 										    					<div class="popover">
 										    						<div id="popover36-toggle">
 										    							<a href="#" class="userLink-link">
-										    								<img class="avatar userLink-avatar" src="../img/zhihu/avatar-3.jpg" width="24" height="24"/>
+										    								<img class="avatar userLink-avatar" src="../../img/itour/common/avatar-3.jpg" width="24" height="24"/>
 										    							</a>
 										    						</div>
 										    					</div>
@@ -319,7 +347,7 @@
 										    				<span class="userLink">
 										    					<a  class="userLink-link" href="#">王三天</a>
 										    				</span>
-										    				<span class="commentItemV2-time">2020-12-02</span>
+										    				<span class="commentItemV2-time">12-02</span>
 										    			</div>
 										    			<div class="commentItemV2-metaSibling">
 										    				<div class="commentRichText commentItemV2-content">
@@ -327,26 +355,20 @@
 										    				</div>
 										    				<div class="commentItemV2-footer">
 										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
-																	<span>
-																		<svg class="Zi Zi--Like" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M14.445 9h5.387s2.997.154 1.95 3.669c-.168.51-2.346 6.911-2.346 6.911s-.763 1.416-2.86 1.416H8.989c-1.498 0-2.005-.896-1.989-2v-7.998c0-.987.336-2.032 1.114-2.639 4.45-3.773 3.436-4.597 4.45-5.83.985-1.13 3.2-.5 3.037 2.362C15.201 7.397 14.445 9 14.445 9zM3 9h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1z" fill-rule="evenodd"></path></svg>
-																	</span>
-																	44
+																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
+																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
+																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
+																	</span>44	
+																	
 																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
-																		<svg class="Zi Zi--Reply" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M22.959 17.22c-1.686-3.552-5.128-8.062-11.636-8.65-.539-.053-1.376-.436-1.376-1.561V4.678c0-.521-.635-.915-1.116-.521L1.469 10.67a1.506 1.506 0 0 0-.1 2.08s6.99 6.818 7.443 7.114c.453.295 1.136.124 1.135-.501V17a1.525 1.525 0 0 1 1.532-1.466c1.186-.139 7.597-.077 10.33 2.396 0 0 .396.257.536.257.892 0 .614-.967.614-.967z" fill-rule="evenodd"></path></svg>
 																	</span>
 																	回复
 																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
+																
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
-																		<svg class="Zi Zi--Like" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="transform: rotate(180deg); margin-right: 5px;"><path d="M14.445 9h5.387s2.997.154 1.95 3.669c-.168.51-2.346 6.911-2.346 6.911s-.763 1.416-2.86 1.416H8.989c-1.498 0-2.005-.896-1.989-2v-7.998c0-.987.336-2.032 1.114-2.639 4.45-3.773 3.436-4.597 4.45-5.83.985-1.13 3.2-.5 3.037 2.362C15.201 7.397 14.445 9 14.445 9zM3 9h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1z" fill-rule="evenodd"></path></svg>
-																	</span>
-																	踩
-																</button>
-																<button type="button" class="button commentItemV2-hoverBtn button--plain">
-																	<span>
-																		<svg class="Zi Zi--Report" fill="currentColor" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 5px;"><path d="M19.947 3.129c-.633.136-3.927.639-5.697.385-3.133-.45-4.776-2.54-9.949-.888-.997.413-1.277 1.038-1.277 2.019L3 20.808c0 .3.101.54.304.718a.97.97 0 0 0 .73.304c.275 0 .519-.102.73-.304.202-.179.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V3.964c0-.599-.42-.972-1.053-.835z" fill-rule="evenodd"></path></svg>
 																	</span>
 																	举报
 																</button>
@@ -361,9 +383,217 @@
 										    	</div>
 										    </div>
 										</ul>
+										<ul class="nestComment">
+											<li class="nestComment--rootComment">
+												<div class="commentItemV2">
+													<div>
+														<div class="commentItemV2-meta">
+															<span class="userLink commentItemV2-avatar">
+																<div class="popover">
+																	<div id="popover35-toggle">
+																		<a class="userLink-link">
+																			<img class="avatar userLink-avatar" src="../../img/itour/common/avatar-4.jpg" width="24" height="24"/>
+																		</a>
+																	</div>
+																</div>
+															</span>
+														    <span class="userLink">
+														    	<a  class="userLink-link" href="#">王三天</a>
+														    </span>
+														    <span class="commentItemV2-time">12-02</span>
+														</div>
+														<div class="commentItemV2-metaSibling">
+															<div class="commentRichText commentItemV2-content">
+																<div class="richText ztext">
+																	90后和80后不一样，房子孩子二选一，压力会小很多[赞同]
+																</div>
+															</div>
+															<div class="commentItemV2-footer">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
+																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
+																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
+																	</span>44	
+																	
+																</button>
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	回复
+																</button>
+																
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	举报
+																</button>
+															</div>
+														 
+														</div>
+													</div>
+												</div>
+											</li>
+										    <li class="nestComment--child">
+										    	<div class="commentItemV2">
+										    		<div>
+										    			<div class="commentItemV2-meta">
+										    				<span class="userLink commentItemV2-avatar">
+										    					<div class="popover">
+										    						<div id="popover36-toggle">
+										    							<a href="#" class="userLink-link">
+										    								<img class="avatar userLink-avatar" src="../../img/itour/common/avatar-2.jpg" width="24" height="24"/>
+										    							</a>
+										    						</div>
+										    					</div>
+										    				</span>
+										    				<span class="userLink">
+										    					<a  class="userLink-link" href="#">芊芊左</a>
+										    				</span>
+										    				<span class="commentItemV2-reply">回复</span>
+										    				<span class="userLink">
+										    					<a  class="userLink-link" href="#">王三天</a>
+										    				</span>
+										    				<span class="commentItemV2-time">2020-12-02</span>
+										    			</div>
+										    			<div class="commentItemV2-metaSibling">
+										    				<div class="commentRichText commentItemV2-content">
+										    					<div class="richText ztext">一个都不选岂不更好[惊喜]</div>
+										    				</div>
+										    				<div class="commentItemV2-footer">
+										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
+																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
+																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
+																	</span>44	
+																	
+																</button>
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	回复
+																</button>
+																
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	举报
+																</button>
+										    				</div>
+										    			</div>
+										    		</div>
+										    	</div>
+										    </li>
+										    <li class="nestComment--child">
+										    	<div class="commentItemV2">
+										    		<div>
+										    			<div class="commentItemV2-meta">
+										    				<span class="userLink commentItemV2-avatar">
+										    					<div class="popover">
+										    						<div id="popover36-toggle">
+										    							<a href="#" class="userLink-link">
+										    								<img class="avatar userLink-avatar" src="../../img/itour/common/avatar-3.jpg" width="24" height="24"/>
+										    							</a>
+										    						</div>
+										    					</div>
+										    				</span>
+										    				<span class="userLink">
+										    					<a  class="userLink-link" href="#">无人之境</a>
+										    				</span>
+										    				<span class="commentItemV2-reply">回复</span>
+										    				<span class="userLink">
+										    					<a  class="userLink-link" href="#">王三天</a>
+										    				</span>
+										    				<span class="commentItemV2-time">12-02</span>
+										    			</div>
+										    			<div class="commentItemV2-metaSibling">
+										    				<div class="commentRichText commentItemV2-content">
+										    					<div class="richText ztext">都不要，要啥自行车[飙泪笑]</div>
+										    				</div>
+										    				<div class="commentItemV2-footer">
+										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
+																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
+																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
+																	</span>44	
+																	
+																</button>
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	回复
+																</button>
+																
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	举报
+																</button>
+										    				</div>
+										    			</div>
+										    		</div>
+										    	</div>
+										    </li>
+										    <div>
+										    	<div class="commentMoreReplyButton">
+										    		<button type="button" class="button button--plain">查看全部 14 条回复</button>
+										    	</div>
+										    </div>
+										</ul>
+										<ul class="nestComment">
+											<li class="nestComment--rootCommentNoChild">
+												<div class="commentItemV2">
+													<div>
+														<div class="commentItemV2-meta">
+															<span class="userLink commentItemV2-avatar">
+																<div class="popover">
+																	<div id="popover35-toggle">
+																		<a class="userLink-link">
+																			<img class="avatar userLink-avatar" src="../../img/zhihu/avatar-1.jpg" width="24" height="24"/>
+																		</a>
+																	</div>
+																</div>
+															</span>
+														    <span class="userLink">
+														    	<a  class="userLink-link" href="#">王三天</a>
+														    </span>
+														    <span class="commentItemV2-time">9小时前</span>
+														</div>
+														<div class="commentItemV2-metaSibling">
+															<div class="commentRichText commentItemV2-content">
+																<div class="richText ztext">
+																	90后和80后不一样，房子孩子二选一，压力会小很多[赞同]
+																</div>
+															</div>
+															<div class="commentItemV2-footer">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
+																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
+																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
+																	</span>44	
+																	
+																</button>
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	回复
+																</button>
+																
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
+																	<span>
+																	</span>
+																	举报
+																</button>
+																
+															</div>
+														    
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
 									</div>
 								</div>
-								<div></div>
+								
 							</div>
 						</div>
 	    			</div>

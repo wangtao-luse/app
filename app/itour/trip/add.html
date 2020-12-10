@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/itour/common.css" />
+		<link rel="stylesheet" href="../../css/itour/index.css" />
+		<link rel="stylesheet" href="../../md/css/editormd.min.css" />
+		<link rel="stylesheet" href="../../css/itour/style.css" />
+		<link rel="stylesheet" href="../../css/itour/modal.css" />
+		<script type="text/javascript" src="../../js/common/jquery-3.4.1.js.js" ></script>
+		<script type="text/javascript" src="../../js/itour/index.js" ></script>
+		<script type="text/javascript" src="../../md/editormd.min.js" ></script>
+		<script>
+			var mdEditer;
+			$(function(){
+				 mdEditer=editormd("edit-md-area",{
+					width:1000,//设置编辑器的宽度
+					height:520,//设置编辑器的高度
+					path: "../../md/lib/",
+					watch:false//关闭实时预览
+					
+				});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="itour-banner">
+			<div class="bnner-inside">
+				<div class="banner-container">
+					<div class="banner-logo itour-banner-fl">
+						<a href="#"><img src="../../img/itour/common/itour-logo.png" /></a>
+					</div>
+					<div class="banner-btns itour-banner-fr">
+					
+					   <div class="banner-btn-login itour-banner-fl toolbar-subMenu-box" style="display: block;">
+					   	 <a class="hasAvatar" href="#"><img src="../../img/itour/common/avatar-1.jpg" /></a>
+					   	 <div class="toolbar-subMenu">
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-profile"></i>我的主页</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-mp"></i>攻略管理</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-blog"></i>我的博客</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-account"></i>设置</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-logout"></i>退出</a>
+					   	 </div>
+					   </div>
+					   
+					</div>
+				</div>
+			</div>
+		</div>
+		<article>
+			<div class="article-container">
+				<!--标题-->
+				<div class="article-title-wrp">
+						<input class="article-title-text" type="text" placeholder="请输入标题"/>
+						<span class="suffix">0/100</span>
+				</div>
+				<!--编辑器-->
+				<div  class="edit-mod-container">
+				  <div id="edit-md-area"></div>	
+				</div>			
+			</div>
+			
+		</article>
+	    <!--原创设置-->
+		<div id="article_setting_area" class="appsmg-editor__after-area setttings-container">
+			<div id="js_cover_description_area" class="appmsg-editor__setting-group">
+				<div class="setting-group__title">封面和摘要</div>
+				<div class="setting-group__content setting-group__content_main">
+					<div id="js_cover_area" class="setting-group__cover setting-group__cover_primary">
+						<div class="select-cover__btn js_cover_btn_area">
+							<i class="icon-add_css"></i>
+							<span class="btn-text">选择封面</span>
+							<input type="file" class="input-fileUpload" />
+						</div>
+					</div>
+					<div id="js_description_area" class="setting-group__abstract js_desc_area">
+						<span class="frm_textarea_box with_counter counter_in append count">
+							<textarea id="js_description" placeholder="选填，摘要会在订阅号消息、转发链接等文章外的场景显露，帮助读者快速了解内容，如不填写则默认抓取正文前54字" class="frm_textarea js_desc js_counter js_field" name="digest" max-length="120"></textarea>
+							<em class="frm_input_append frm_counter">0/120</em>
+						</span>
+					</div>
+				</div>
+				
+			</div>
+		     <!--原创声明--->
+		    <div id="js_original" class="appmsg-editor__setting-group">
+		    	<div class="setting-group__title">原创声明</div>
+		    	<!--未声明原创-->
+		    	<div class="setting-group__content js_original_type" style="display: block;">
+	                <div class="setting-group__switch">
+	                  <label class="weui-desktop-switch">
+	                    <input class="weui-desktop-switch__input js_original_apply js_ori_setting_checkbox" type="checkbox">
+	                    <div class="weui-desktop-switch__box"></div>
+	                  </label>
+	                  <div>未声明原创</div>
+	                </div>
+	            </div>
+	            
+		    </div>
+		    <div id="article_setting_area2" class="appmsg-editor__setting-group">
+		    	<div class="setting-group__title" id="article_type_setting">文章设置</div>
+		    	<div class="setting-group__content">
+		    		<div id="js_article_tags_area" class="setting-group__checkbox-item">
+		    			<label class="frm_checkbox_label">
+		    				<input type="checkbox" class="frm_checkbox js_article_tags">
+		    				<i class="icon_checkbox"></i>
+		    				<div class="allow_click_opr js_article_tags_label">
+		    					<span class="lbl_content">话题标签</span>
+		    					<i class="lbl_content_after read-more__icon__more"></i>
+		    					<span class="lbl_content_after lbl_content_desc js_article_tags_content">最多可以指定三个标签</span>
+		    				</div>
+		    			</label>
+		    		</div>
+		    	    <div id="js_article_option_area" class="setting-group__checkbox-item">
+		    	    	<label class="frm_checkbox_label selected">
+		    	    		<input type="checkbox" class="frm_checkbox" />
+		    	    		<i class="icon_checkbox js_option_checkbox_icon"></i>
+		    	    		<div class="allow_click_opr js_article_option_allow_click">
+		    	    			<span class="lbl_content">分类专栏</span>
+		    	    			<i class="lbl_content_after read-more__icon__more"></i>
+		    	    			<span class="lbl_content_after lbl_content_desc lbl_content_desc_url article_url_setting">最多可以设置三个分类专栏</span>
+		    	    		</div>
+		    	    	</label>
+		    	    </div>
+		    	</div>
+		    </div>
+		
+		</div>
+		
+	</body>
+</html>
