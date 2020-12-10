@@ -1,1 +1,293 @@
+/**title start**/
+.article-container{
+	width: 1000px;
+	margin: 0 auto;
+}
+.article-title-wrp{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+    margin: 8px 16px 8px 0px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-weight: 500;
+}
+.article-title-wrp .article-title-text{
+	display: block;
+	width: 100%;
+	height: 38px;
+	line-height: 24px;
+	padding: 8px;
+	background: #FFF;
+	outline: none;
+	border: none;
+	border-radius: 8px;
+	font-size: 18px;
+	color: #4d4d4d;
+	box-sizing: border-box;
+}
+.article-title-wrp .suffix{
+	display: inline-flex;
+	align-items: center;
+	margin-right: 8px;
+	color: rgba(0,0,0,0.75);
+}
+/**title end**/
+/**文章设置开始**/
+.setttings-container{
+	width: 1000px;
+	margin: 0 auto;
+	
+}
+.appsmg-editor__after-area{
+	padding: 20px;
+	background: #fff;
+	box-sizing: border-box;
+	z-index: 100;
+}
+.appmsg-editor__setting-group{
+	margin-bottom: 30px;
+}
+.setting-group__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.setting-group__cover {
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.select-cover__btn {
+    display: block;
+    width: 211.5px;
+    height: 90px;
+    box-sizing: border-box;
+    border: 2px dashed #ebebeb;
+    color: #0084ff;
+    text-align: center;
+    padding-top: 16px;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+}
+.setting-group__content_main:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
 
+.icon-add_css{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: relative;
+}
+.icon-add_css:before{
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #0084ff;
+	width: 20px;
+	height: 2px;
+	top: 11px;
+	left: 2px;
+}
+.icon-add_css:after{
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #0084ff;
+	width: 2px;
+	height: 20px;
+	top: 2px;
+	left: 11px;
+	
+}
+.select-cover__btn .btn-text {
+    display: block;
+}
+.setting-group__abstract {
+    overflow: hidden;
+}
+
+
+.setting-group__content_main .frm_textarea_box {
+    display: block;
+    width: auto;
+    height: 90px;
+    margin-bottom: 0!important;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.frm_textarea_box.with_counter {
+    position: relative;
+    margin-bottom: 27px;
+}
+.frm_textarea_box {
+    display: inline-block;
+    width: 288px;
+    padding: 4px 0 4px 10px;
+    font-size: 14px;
+    border: 1px solid #e7e7eb;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: #fff;
+}
+.frm_textarea_box.with_counter {
+    position: relative;
+    margin-bottom: 27px;
+}
+.setting-group__content_main .frm_textarea_box {
+    display: block;
+    width: auto;
+    height: 90px;
+    margin-bottom: 0!important;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.frm_textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+.setting-group__content_main .frm_textarea {
+    height: 100%;
+}
+.setting-group__content_main .frm_counter {
+    height: 20px;
+    line-height: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    padding-right: 10px;
+    font-style: normal;
+}
+.frm_textarea_box.with_counter .frm_counter {
+    color: #9a9a9a;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/**原创声明**/
+.setting-group__switch{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: flex-start;
+	-webkit-box-align: start;
+	align-items: flex-start
+}
+.setting-group__switch .weui-desktop-switch{
+	margin-right: 10px;
+}
+.weui-desktop-switch__input {
+    position: absolute;
+    left: -9999px;
+}
+.weui-desktop-switch__box{
+	position: relative;
+	box-sizing: border-box;
+	width: 36px;
+	height: 20px;
+	border: 1px solid #C9C9C9;
+	border-radius: 16px;
+	background: #C6C6C6;
+	cursor: pointer;
+}
+.weui-desktop-switch__box:after{
+	content: "";
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	left: 2px;
+	top: 1px;
+	border-radius: 15px;
+	background-color:#FFF;
+}
+.weui-desktop-switch__input:checked~.weui-desktop-switch__box:after{
+	left: calc(98%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+	
+}
+.weui-desktop-switch__input:checked~.weui-desktop-switch__box{
+	border-color: #0088FF;
+	background-color: #0088FF;
+}
+/**文章设置**/
+.setting-group__checkbox-item {
+    margin-top: 20px;
+}
+.appsmg-editor__after-area .frm_checkbox_label {
+    white-space: nowrap;
+}
+.setting-group__checkbox-item .frm_checkbox_label {
+    display: block;
+    margin-top: 20px;
+}
+.setting-group__checkbox-item .frm_checkbox_label:first-child {
+    margin-top: 0;
+}
+.frm_radio, .frm_checkbox {
+    position: absolute;
+    left: -999em;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.icon_radio, .icon_checkbox {
+    margin-right: 3px;
+    margin-top: -2px;
+    *margin-top: 0;
+}
+.icon_checkbox {
+    background: url(../../img/itour/common/base_z49d030.png) 0 -220px no-repeat;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.disabled .icon_checkbox {
+    background: url(../../img/itour/common/base_z49d030.png) 0 -260px no-repeat;
+}
+.allow_click_opr {
+    display: inline-block;
+}
+.read-more__icon__more {
+    font-size: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../img/itour/common/right.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-left: -2px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.lbl_content_desc {
+    display: inline-block;
+    max-width: 400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #9a9a9a;
+    vertical-align: bottom;
+}
+/**文章设置结束**/

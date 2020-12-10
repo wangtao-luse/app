@@ -184,7 +184,62 @@
 		
 		
 		
-	
+	    <style>
+	    	.setting-group__switch{
+	    		display: -webkit-box;
+	    		display: -ms-flexbox;
+	    		display: flex;
+	    		-webkit-align-items: flex-start;
+	    		-webkit-box-align: start;
+	    		align-items: flex-start
+	    	}
+	    	.setting-group__switch .weui-desktop-switch{
+	    		margin-right: 10px;
+	    	}
+	    	.weui-desktop-switch__box{
+	    		position: relative;
+	    		box-sizing: border-box;
+	    		width: 36px;
+	    		height: 20px;
+	    		border: 1px solid #C9C9C9;
+	    		border-radius: 16px;
+	    		background: #C6C6C6;
+	    		cursor: pointer;
+	    	}
+	    	.weui-desktop-switch__box:after{
+	    		content: "";
+	    		position: absolute;
+	    		width: 16px;
+	    		height: 16px;
+	    		left: 2px;
+	    		top: 1px;
+	    		border-radius: 15px;
+	    		background-color:#FFF;
+	    	}
+	    	.weui-desktop-switch__input:checked~.weui-desktop-switch__box:after{
+	    		left: calc(98%);
+	    		-ms-transform: translateX(-100%);
+	    		transform: translateX(-100%);
+	    		
+	    	}
+	    	.weui-desktop-switch__input:checked~.weui-desktop-switch__box{
+	    		border-color: #07c160;
+    			background-color: #07c160;
+	    	}
+	    	.weui-desktop-switch__input {
+			    position: absolute;
+			    left: -9999px;
+			}
+	    </style>
+		<div class="setting-group__switch">
+			<label class="weui-desktop-switch">
+				 <input type="checkbox" class="weui-desktop-switch__input js_original_apply js_ori_setting_checkbox" />
+				<div class="weui-desktop-switch__box"></div>
+			</label>
+			<div>未声明原创</div>
+		</div>
+		
+		
 		
 	    
 	</body>

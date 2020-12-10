@@ -107,6 +107,7 @@ float: left;
 }
 #itour-banner .itour-banner-fr{
 	float: right;
+	margin-left: auto;
 }
 #itour-banner .banner-btns{
 	height: 100%;
