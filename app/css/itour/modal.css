@@ -238,7 +238,6 @@ button, [type="button"], [type="reset"], [type="submit"], input[type="search"]::
     padding: 24px 32px;
     text-align: center;
 }
-
 .weui-desktop-mask {
     position: fixed;
     top: 0;
