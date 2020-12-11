@@ -1,0 +1,252 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, fieldset, textarea {
+    margin: 0;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+button, [type="button"], [type="reset"], [type="submit"], input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+}
+.weui-desktop-dialog__wrp{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	white-space: nowrap;
+	overflow: auto;
+	z-index: 5000;
+}
+.weui-desktop-dialog{
+	display: inline-block;
+	min-width: 600px;
+	max-width: 980px;
+	text-align: left;
+	margin: 40px;
+	white-space: normal;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
+	box-sizing: border-box;
+    
+}
+.weui-desktop-dialog__hd{
+	position: relative;
+	overflow: hidden;
+	padding: 0 32px;
+	height: 72px;
+	line-height: 72px;
+}
+.weui-desktop-dialog__title {
+    font-weight: normal;
+    font-size: 16px;
+}
+.weui-desktop-dialog__close-btn {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    margin-top: -9px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.article_tags_dialog .article_tags_history_bd {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.weui-desktop-icon-btn {
+    background-color: transparent;
+    padding: 0;
+    border-width: 0;
+    vertical-align: middle;
+    font-size: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.article_tags_dialog .article_tags_dialog_inner {
+    padding: 20px 32px 0;
+}
+.weui-desktop-form__control-group {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.weui-desktop-form__control-group {
+    margin-bottom: 40px;
+}
+.weui-desktop-form__label{
+	float: left;
+	width: 2.5em;
+	margin-right: 20px;
+	margin-top: 0.628571em;
+}
+.weui-desktop-form__controls{
+	-ms-flex: 1;
+	flex: 1;
+	min-width: 0;
+	display: block;
+	width: auto;
+}
+.article_tags_dialog .tags_input_wrap {
+    position: relative;
+}
+.weui-desktop-form-tag__area{
+	display: block;
+	position: relative;
+	border: 1px solid #e4e8eb;
+	padding: 0.62857143em 10px 0;
+	border-radius: 3px;
+	overflow: auto;
+	padding-right: 50px;
+	
+}
+.weui-desktop-form__input-append-in{
+	width: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding-right: 8px;
+	text-align: right;
+	z-index: 1;
+	
+}
+.weui-desktop-form__counter{
+	font-style: normal;
+	color: #9a9a9;
+	vertical-align: middle;
+	font-size: 14px;
+}
+.weui-desktop-form-tag__area .weui-desktop-form__counter{
+	position: relative;
+	margin-left: 16px;
+	z-index: 1;
+}
+.weui-desktop-form__input-append-in:after {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+ }
+ .weui-desktop-form-tag__wrp{
+ 	width: auto;
+ 	display: block;
+ 	overflow: auto;
+ 	margin: 0;
+ }
+.weui-desktop-form-tag__input{
+	border-width: 0;
+	background-color: transparent;
+	margin-left: 3px;
+	width: 5em;
+	height: 1.45714286em;
+	line-height: 1.45714286em;
+	margin-top: -0.2em;
+	font-size: 11px;
+}
+.weui-desktop-form-tag__area .weui-desktop-form-tag__input {
+    vertical-align: top;
+    margin-bottom: 0.62857143em;
+}
+.article_tags_dialog .weui-desktop-form-tag__input {
+    width: 12em;
+}
+
+.weui-desktop-form__tips{
+	padding-top: 8px;
+	color: #9a9a9a;
+	line-height: 1.6;
+}
+.article_tags_dialog .article_tags_history_hd {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 18px;
+}
+.article_tags_dialog .article_tags_history_hd h4 {
+    -ms-flex: 1;
+    flex: 1;
+    font-weight: 400;
+}
+.weui-desktop-form__check-label{
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: 30px;
+	font: inherit;
+	font-size: 14px;
+	color: #353537;
+	font-weight: 500;
+}
+.article_tags_dialog .article_tags_history_bd .weui-desktop-form__check-label {
+    margin-bottom: 16px;
+}
+.weui-desktop-form__radio, .weui-desktop-form__checkbox {
+    position: absolute;
+    left: -9999em;
+}
+.weui-desktop-icon-radio, .weui-desktop-icon-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 1px solid #C9CDD3;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 0;
+}
+.weui-desktop-icon-checkbox {
+	text-align: center;
+    border-radius: 2px;
+}
+.weui-desktop-form__checkbox:checked+.weui-desktop-icon-checkbox:before {
+    content: " ";
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-radius: 1px;
+    display: inline-block;
+    vertical-align: 8px;
+    margin-top: 3px;
+    transform: matrix(0.71,-0.71,0.71,0.71,0,0);
+    -ms-transform: matrix(0.71,-0.71,0.71,0.71,0,0);
+    -webkit-transform: matrix(0.71,-0.71,0.71,0.71,0,0);
+}
+
+.weui-desktop-form__checkbox:checked + .weui-desktop-icon-checkbox {
+    border: 1px solid #0088FF;
+    background-color: #0088FF;
+}
+.weui-desktop-dialog__ft {
+    padding: 24px 32px;
+    text-align: center;
+}
+
+.weui-desktop-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    cursor: default;
+    color: #fff;
+}
