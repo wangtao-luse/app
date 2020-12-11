@@ -46,6 +46,7 @@
 	background: #fff;
 	box-sizing: border-box;
 	z-index: 100;
+	margin-bottom: 60px;
 }
 .appmsg-editor__setting-group{
 	margin-bottom: 30px;
@@ -265,6 +266,10 @@ input[type="checkbox"], input[type="radio"] {
 .disabled .icon_checkbox {
     background: url(../../img/itour/common/base_z49d030.png) 0 -260px no-repeat;
 }
+.selected .icon_checkbox{
+    background: url(../../img/itour/common/base_z49d030.png) 0 -240px no-repeat;
+
+}
 .allow_click_opr {
     display: inline-block;
 }
@@ -290,4 +295,126 @@ input[type="checkbox"], input[type="radio"] {
     color: #9a9a9a;
     vertical-align: bottom;
 }
+.frm_tips, .frm_msg {
+    padding-top: 4px;
+    width: 300px;
+}
+.frm_msg {
+    display: none;
+    overflow: hidden;
+    *zoom: 1;
+}
+.frm_msg.fail {
+    color: #fa5151;
+}
+.tool_bar__fold-btn {
+    display: inline-block;
+    padding: 0 15px 0 13px;
+    font-size: 14px;
+    white-space: nowrap;
+    line-height: 34px;
+    border-radius: 18px;
+    background-color: #fff;
+    color: #9a9a9a;
+    box-shadow: 0 1px 4px 0 rgba(227,226,226,0.6);
+}
+.tool_bar__fold-btn:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-top: -0.2em;
+    background: url(../../img/itour/common/up.png) no-repeat ;
+    background-size:100% ;
+    background-clip: ;
+}
+.tool_bar__fold-btn.fold:before {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    margin-top: -0.1em;
+}
+
 /**文章设置结束**/
+/**bottom_main start**/
+.tool_area_wrp{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #d9dadc;
+	background-color: #fff;
+	z-index: 118;
+    border-top-width: 0;
+    box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.05);
+
+}
+.tool_area:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.tool_area_wrp .tool_area{
+	width: 1000px;
+	margin: 0 auto;
+	
+}
+.tool_area_wrp .tool_bar{
+	position: relative;
+	padding: 20px 50px 15px 20px;
+}
+.tool_bar:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.tool_area_wrp .tool_bar .tool_bar_extend_left{
+	float: left;
+	vertical-align: middle;
+	margin-top: 5px;
+	font-size: 0;
+}
+.tool_area_wrp .tool_bar .fold_tips{
+	position: relative;
+	color: #9a9a9a;
+	margin-top: 5px;
+	font-size: 14px;
+	padding-left: 15px;
+	margin-left: 14px;
+}
+.tool_area_wrp .tool_bar .fold_tips:first-child{
+	padding-left: 0;
+	margin-left: 0;
+}
+.tool_area_wrp .tool_bar .fold_tips_value{
+	margin-left: 8px;
+}
+.tool_area_wrp .tool_bar .fold_tips_scrolltop {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 0;
+}
+.tool_area_wrp .tool_bar .fold_tips:last-child {
+    padding-right: 0;
+}
+.tool_area_wrp .tool_bar .btn.fr {
+    margin-left: 12px;
+}
+.tool_area_wrp .tool_bar .btn:last-child{
+	margin-left: 0;
+}
+.tool_area_wrp .tool_bar .btn {
+    min-width: 100px;
+}
+
+
