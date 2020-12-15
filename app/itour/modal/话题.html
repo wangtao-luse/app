@@ -6,9 +6,27 @@
 		<link rel="stylesheet" href="../../css/itour/common.css" />
 		<link rel="stylesheet" href="../../css/itour/index.css" />
 		<link rel="stylesheet" href="../../css/itour/modal.css" />
+		<script type="text/javascript" src="../../js/common/jquery-3.4.1.js.js" ></script>
+		<script type="text/javascript" src="../../js/itour/modal.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#article_tags_dialog").click(function(){
+					$("#article_tags_dialog+div.dialog-wrapper").show();
+				})
+				
+			})
+		</script>
 	</head>
 	<body>
-		<button type="button">话题标签</button>
+		<p style="display: none;">
+			checkbox:
+			 1.获取选择的checkbox的个数
+			  $("input[type='checkbox']:checked").length;
+			 2.获取未选择的checkbox的个数
+			  $("input[type='checkbox']:not(:checked)").length;
+			 3.$("input[type='checkbox']").is(':checked')---可用来判断状态
+		</p>
+		<button type="button" id="article_tags_dialog">话题标签</button>
 		 <div class="dialog-wrapper">
 		 	<div class="weui-desktop-dialog__wrp article_tags_dialog js_article_tags_dialog">
 		 		<div class="weui-desktop-dialog" style="width: 600px;">
@@ -20,7 +38,7 @@
 		 			</div>
 		 		    <div class="weui-desktop-dialog__bd">
 		 		    	<div class="article_tags_dialog_inner">
-		 		    		<form>
+		 		    		<form onsubmit="return false;">
 		 		    			<div class="weui-desktop-form__control-group">
 		 		    				<label class="weui-desktop-form__label">话题</label>
 		 		    				<div class="weui-desktop-form__controls">
@@ -32,6 +50,19 @@
 		 		    						  	 		<em class="weui-desktop-form__counter">0/16</em>
 		 		    						  	 	</span>		 		    						  	 	
 		 		    						  	 	 <span class="weui-desktop-form-tag__wrp">
+		 		    						  	 	 	<span class="weui-desktop-form-tag" style="display: none;">
+		 		    						  	 	 		<i class="weui-desktop-form-tag__name">深圳周末旅行攻略</i>
+		 		    						  	 	 		<button type="button" class="weui-desktop-opr-btn weui-desktop-opr-btn_close"></button>
+		 		    						  	 	 	</span>
+		 		    						  	 	 	<span class="weui-desktop-form-tag" style="display: none;">
+		 		    						  	 	 		<i class="weui-desktop-form-tag__name">张家界周末最佳旅行攻略</i>
+		 		    						  	 	 		<button type="button" class="weui-desktop-opr-btn weui-desktop-opr-btn_close"></button>
+		 		    						  	 	 	</span>
+		 		    						  	 	 	<span class="weui-desktop-form-tag" style="display: none;">
+		 		    						  	 	 		<i class="weui-desktop-form-tag__name">崇明岛周末旅行攻略崇明岛周末旅行</i>
+		 		    						  	 	 		<button type="button" class="weui-desktop-opr-btn weui-desktop-opr-btn_close"></button>
+		 		    						  	 	 	</span>
+		 		    						  	 	 	
 			 		    						  	 	<input type="text"placeholder="请输入话题，按回车分割" class="weui-desktop-form-tag__input" />
 			 		    						  	 </span>
 		 		    						  	 	<label class="weui-desktop-form-tag__input__label"></label>
@@ -50,7 +81,7 @@
 		 		    					    </div>
 		 		    					</div>
 		 		    					<div class="weui-desktop-form__tips">
-		 		    						<p>最多五个，设置后文章顶部会展现话题</p>
+		 		    						<p>最多三个，设置后文章顶部会展现话题</p>
 		 		    					</div>
 		 		    				</div>
 		 		    			</div>
@@ -63,7 +94,7 @@
 		 		    						</div>
 		 		    						<div class="article_tags_history_bd">
 		 		    							<label class="weui-desktop-form__check-label">
-		 		    								<input type="checkbox" class="weui-desktop-form__checkbox" value="" />
+		 		    								<input type="checkbox" class="weui-desktop-form__checkbox" value=""  disabled="disabled"/>
 		 		    								<i class="weui-desktop-icon-checkbox"></i>
 		 		    								<span class="weui-desktop-form__check-content">上海旅行</span>
 		 		    							</label>
@@ -85,17 +116,17 @@
 		 		    							<label class="weui-desktop-form__check-label">
 		 		    								<input type="checkbox" class="weui-desktop-form__checkbox" value="" />
 		 		    								<i class="weui-desktop-icon-checkbox"></i>
-		 		    								<span class="weui-desktop-form__check-content">广州旅行</span>
+		 		    								<span class="weui-desktop-form__check-content">云南旅行</span>
 		 		    							</label>
 		 		    							<label class="weui-desktop-form__check-label">
 		 		    								<input type="checkbox" class="weui-desktop-form__checkbox" value="" />
 		 		    								<i class="weui-desktop-icon-checkbox"></i>
-		 		    								<span class="weui-desktop-form__check-content">杭州旅行</span>
+		 		    								<span class="weui-desktop-form__check-content">苏州旅行</span>
 		 		    							</label>
 		 		    							<label class="weui-desktop-form__check-label">
 		 		    								<input type="checkbox" class="weui-desktop-form__checkbox" value="" />
 		 		    								<i class="weui-desktop-icon-checkbox"></i>
-		 		    								<span class="weui-desktop-form__check-content">南京旅行</span>
+		 		    								<span class="weui-desktop-form__check-content">北京旅行</span>
 		 		    							</label>
 		 		    						</div>
 		 		    					</div>
@@ -116,6 +147,90 @@
 		 	</div>
 		 	<div class="weui-desktop-mask"></div>
 		 </div>
-		
+		 
+		 <div class="modal-wrapper undefined Modal-enter-done">
+		 	<div class="modal-backdrop"></div>
+		 	<div class="modal modal--large favlistsModal">
+		 		<div class="modal-inner">
+		 			<h3 class="modal-title">添加收藏</h3>
+		 			<div class="modal-subtitle">请选择你想添加的收藏夹</div>
+		 			<div class="modal-content">
+		 				<div class="favlists-content">
+		 					<div class="favlists-items">
+		 						<div class="favlists-item">
+		 							<div class="favlists-itemInner">
+		 								<div class="favlists-itemName">
+		 									<span class="favlists-itemNameText">上海</span>
+		 								</div>
+		 								<div class="favlists-itemContent">5条内容</div>
+		 							</div>
+		 							<button type="button" class="button favlists-updateButton button--primary button--blue">已收藏</button>
+		 						</div>
+		 						<div class="favlists-item">
+		 							<div class="favlists-itemInner">
+		 								<div class="favlists-itemName">
+		 									<span class="favlists-itemNameText">上海</span>
+		 								</div>
+		 								<div class="favlists-itemContent">5条内容</div>
+		 							</div>
+		 							<button type="button" class="button favlists-updateButton button--blue">收藏</button>
+		 						</div>
+		 						<div class="favlists-item">
+		 							<div class="favlists-itemInner">
+		 								<div class="favlists-itemName">
+		 									<span class="favlists-itemNameText">上海</span>
+		 								</div>
+		 								<div class="favlists-itemContent">5条内容</div>
+		 							</div>
+		 							<button type="button" class="button favlists-updateButton button--blue">收藏</button>
+		 						</div>
+		 						<div class="favlists-item">
+		 							<div class="favlists-itemInner">
+		 								<div class="favlists-itemName">
+		 									<span class="favlists-itemNameText">上海</span>
+		 								</div>
+		 								<div class="favlists-itemContent">5条内容</div>
+		 							</div>
+		 							<button type="button" class="button favlists-updateButton button--blue">收藏</button>
+		 						</div>
+		 						<div class="favlists-item">
+		 							<div class="favlists-itemInner">
+		 								<div class="favlists-itemName">
+		 									<span class="favlists-itemNameText">上海</span>
+		 								</div>
+		 								<div class="favlists-itemContent">5条内容</div>
+		 							</div>
+		 							<button type="button" class="button favlists-updateButton button--blue">收藏</button>
+		 						</div>
+		 						<div class="favlists-item">
+		 							<div class="favlists-itemInner">
+		 								<div class="favlists-itemName">
+		 									<span class="favlists-itemNameText">上海</span>
+		 								</div>
+		 								<div class="favlists-itemContent">5条内容</div>
+		 							</div>
+		 							<button type="button" class="button favlists-updateButton button--blue">收藏</button>
+		 						</div>
+		 						<div class="favlists-item">
+		 							<div class="favlists-itemInner">
+		 								<div class="favlists-itemName">
+		 									<span class="favlists-itemNameText">默认收藏夹</span>
+		 								</div>
+		 								<div class="favlists-itemContent">5条内容</div>
+		 							</div>
+		 							<button type="button" class="button favlists-updateButton button--blue">收藏</button>
+		 						</div>
+		 					</div>
+		 					<div class="favlists-actions">
+		 						<button type="button" class="button favlists-addButton button--primary button--blue">创建收藏夹</button>
+		 					</div>
+		 				</div>
+		 			</div>
+		 		</div>
+		 		<button type="button" class="button modal-closeButton button--plain">
+		 			<svg class="Zi Zi--Close Modal-closeIcon" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M13.486 12l5.208-5.207a1.048 1.048 0 0 0-.006-1.483 1.046 1.046 0 0 0-1.482-.005L12 10.514 6.793 5.305a1.048 1.048 0 0 0-1.483.005 1.046 1.046 0 0 0-.005 1.483L10.514 12l-5.208 5.207a1.048 1.048 0 0 0 .006 1.483 1.046 1.046 0 0 0 1.482.005L12 13.486l5.207 5.208a1.048 1.048 0 0 0 1.483-.006 1.046 1.046 0 0 0 .005-1.482L13.486 12z" fill-rule="evenodd"></path></svg>
+		 		</button>
+		 	</div>
+		 </div>
 	</body>
 </html>
