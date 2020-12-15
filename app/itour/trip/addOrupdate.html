@@ -16,7 +16,7 @@
 			$(function(){
 				 mdEditer=editormd("edit-md-area",{
 					width:1000,//设置编辑器的宽度
-					height:520,//设置编辑器的高度
+					height:720,//设置编辑器的高度
 					path: "../../md/lib/",
 					watch:false//关闭实时预览
 					
@@ -83,7 +83,7 @@
 						</span>
 					</div>
 				</div>
-				
+				<div class="frm_msg fail js_cover_error js_error_msg" style="display: block;">必须插入一张图片</div>
 			</div>
 		     <!--原创声明--->
 		    <div id="js_original" class="appmsg-editor__setting-group">
@@ -128,6 +128,32 @@
 		    	</div>
 		    </div>
 		
+		</div>
+		<div class="tool-bar-wrapper">
+			<div id="bottom_main" class="tool_area_wrp">
+				<div class="js_bot_bar tool_area">
+					<div class="tool_bar">
+						<div class="tool_bar_extend_left">
+							<span id="word_count_container" class="fold_tips">
+								正文字数
+								<span  class="fold_tips_value">0</span>
+							</span>
+							<span class="js_fold fold_tips fold_tips_scrolltop">
+								<a class="tool_bar__fold-btn">文章设置</a>
+							</span>
+						</div>
+						<span id="js_send" class="btn btn_input btn_default fr">
+							<button type="button">保存草稿</button>
+						</span>
+						<span id="js_preview" class="btn btn_input btn_default fr no_extra">
+							<button type="button">预览</button>
+						</span>
+						<span id="js_submit" class="btn btn_input btn_primary fr">
+							<button type="button">保存</button>
+						</span>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 	</body>

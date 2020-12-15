@@ -22,5 +22,16 @@ $(function(){
 	$("#comment_content").blur(function(){
 		$(this).removeClass("open");
 	});
+	$(".tool_bar__fold-btn").click(function(){
+		var fold = $(this).hasClass("fold");
+		if(fold){
+			 $(this).removeClass("fold");	
+			 $(this).text("回到顶部");
+		}else{
+		  $(this).addClass("fold");	
+		  $(this).text("文章设置");
+		}
+		
+	})
 	
 })
