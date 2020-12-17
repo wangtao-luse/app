@@ -5,9 +5,12 @@
 		<title></title>
 		<link rel="stylesheet" href="../../css/itour/common.css" />
 		<link rel="stylesheet" href="../../css/itour/index.css" />
+		<link rel="stylesheet" href="../../css/itour/style.css" />
+		<script type="text/javascript" src="../../js/common/jquery-3.4.1.js.js" ></script>
+		<script type="text/javascript" src="../../js/itour/modal.js" ></script>
 		
 	</head>
-	<body>
+	<body style="background: #fff;">
 		<div class="login-head-wrap">
 			<div class="w">
 				<div class="logo">
@@ -38,22 +41,23 @@
 	        				<div class="msg-wrap">
 	        					<div class="msg-error hide">
 	        						<b></b>
+	        						请输入用户名
 	        					</div>
 	        				</div>
 	        			    <div class="mc">
 	        			    	<div class="form">
 	        			    		<form id="loginform" onsubmit="return false" method="post">
 	        			    			<input type="hidden" id="uuid" name="uuid" />
-	        			    			<div class="item item-fore1">
+	        			    			<div class="item item-fore1 item-error">
 	        			    				<label class="login-label name-label"></label>
 	        			    				<input type="text" class="itxt" placeholder="邮箱/用户名/登录手机" autocomplete="off" />
-	        			    				<span class="clear-btn" style="display: inline"></span>
+	        			    				<span class="clear-btn" style="display: none"></span>
 	        			    			</div>
-	        			    			<div class="item item-fore2">
+	        			    			<div class="item item-fore2 ">
 	        			    				<label class="login-label pwd-label"></label>
 	        			    				<input type="password" class="itxt itxt-error" placeholder="密码" autocomplete="off" />
-	        			    			    <span class="clear-btn" style="display: inline;"></span>
-	        			    			    <span class="capslock" style="display: inline;">
+	        			    			    <span class="clear-btn" style="display: none;"></span>
+	        			    			    <span class="capslock" style="display: none;">
 	        			    			    	<b></b>
 	        			    			    	大小写锁定已打开
 	        			    			    </span>
@@ -83,13 +87,13 @@
 					    	<ul>
 					    		<li>
 					    			<b></b>
-					    			<a href="#">
+					    			<a href="#" class="pdl">
 					    				<b class="QQ-icon"></b>
 					    				<span>QQ</span>
 					    			</a>
 					    			<span class="line">|</span>
 					    		</li><li>
-					    			<a href="#">
+					    			<a href="#" class="pdl">
 					    				<b class="weixin-icon"></b>
 					    				<span>微信</span>
 					    			</a>
@@ -109,9 +113,65 @@
 					</div>
 				</div>
 			    <div class="login-banner i-inner">
-	            	<div class="banner-bg"></div>
+			    	<div class="w">
+			    		<div id="banner-bg" class="i-inner"></div>
+			    	</div>
+	            	
 	            </div>
 			</div>
 		</div>
+	    <footer id="footer">
+	    	<div class="container">
+	    		<div class="copyright">
+	    			Copyright&nbsp;©&nbsp;2020-2021 &nbsp;&nbsp;爱旅行SHOW&nbsp;wangtao.com&nbsp;版权所有<br>
+	    		<a href="http://beian.miit.gov.cn" rel="nofollow">湘ICP备2020018917号</a>
+	    		</div>
+	    		
+	    	</div>
+	    	
+	    	
+	    </footer>
+	    <div class="itour-suspend-warp itour-bind-suspend-wrap" id="itour-wrap-loginsubmit" style="width: 304px; top: 150.464px; left: 930.125px; height: 296.686px; display: block;">
+	    	<div class="itour-suspend-slide">
+	    		<div class="itourValidate-wrap">
+	    			<a class="itour-close"style="outline: rgb(109, 109, 109) none 0px;"></a>
+	    			<a class="itour-arrow"></a>
+	    			<div class="itour-slider itour-slide-err" style="width: auto" classname="itour-slider">
+	    				<div class="itour-img-panel itour-click-bind-suspend ">
+	    					<div class="itour-refresh" style="margin-right: 15px">
+	    						<div class="itour-lable-refresh">完成拼图验证</div>
+	    						<div class="itour-img-refresh">
+	    							<span >换一张</span>
+	    							<div></div>
+	    						</div>
+	    					</div>
+	    					<div class="itour-img-wrap">
+	    						<div class="itour-bigimg" style="height: 108.111px;">
+	    							<img src="../../img/itour/common/bigimg.png" />
+	    						</div>
+	    						<div class="itour-smallimg" style="top: 18.5333px; width: 38.6111px; left: 0px;">
+	    							<img src="../../img/itour/common/smallimg.png" />
+	    						</div>
+	    					</div>
+	    				</div>
+	    				<div class="itour-slide-bg ">
+	    					<div class="itour-slide-inner itour-slide-text">
+	    						<div class="itour-slide-left"></div>
+	    						<div class="itour-slide-center">向右滑动完成拼图</div>
+	    						<div class="itour-slide-right"></div>
+	    					</div>
+	    					<div class="itour-slide-inner itour-slide-bar" style="display: block; width: 0px;">
+	    						<div class="itour-bar-left"></div>
+	    						<div class="itour-bar-center"></div>
+	    						<div class="itour-bar-right"></div>
+	    					</div>
+	    					<div class="itour-slide-inner itour-slide-btn" style="left: 0;">
+	    						
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
 	</body>
 </html>

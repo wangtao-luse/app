@@ -793,6 +793,7 @@ overflow: hidden;
 #footer .container{
 	width: 1000px;
 	background: #fff;
+	margin: 0 auto;
 }
 #footer .copyright{
 	text-align: center;
@@ -1573,6 +1574,13 @@ border-radius: 2px;
     overflow: hidden;
     background: url(../../img/itour/common/pwd-icons-new.png) -104px -133px no-repeat;
 }
+.form .item .pwd-label {
+    background-position: -48px 0;
+}
+.form .item-error .pwd-label {
+    background-position: -48px -96px;
+    border-color: #e4393c;
+}
 .form .item-fore3 {
     z-index: 5;
     margin-bottom: 13px;
@@ -1634,6 +1642,11 @@ border-radius: 2px;
     top: 0;
     margin: 0;
 }
+.login-form .login-box .safe .forget-pw-safe:hover{
+	color: #007BFF;
+	text-decoration: underline;
+	cursor: pointer;
+}
 .form .item-fore5 {
     margin-bottom: 10px;
 }
@@ -1662,4 +1675,116 @@ border-radius: 2px;
     color: #fff;
     font-size: 20px;
     font-family: 'Microsoft YaHei';
+}
+.login-form .msg-error b {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: block;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(../../img/itour/common/pwd-icons-new.png) -104px -49px no-repeat;
+}
+.form .item-error {
+    border: 1px solid #e4393c;
+}
+.form .item-error .name-label {
+    background-position: 0 -96px;
+    border-color: #e4393c;
+}
+.coagent {
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 50px;
+    border-top: 1px solid #f4f4f4;
+    height: auto;
+    background-color: #fcfcfc;
+}
+.coagent ul {
+    display: inline-block;
+    display: block;
+}
+.coagent li {
+    float: left;
+}
+.coagent a {
+    color: #666;
+    text-decoration: none;
+}
+.coagent li a.pdl {
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+}
+.coagent li span{
+	font-size: 11px;
+}
+.coagent li span:hover{
+	color: #007BFF;
+	text-decoration: underline;
+}
+.coagent li .line {
+    color: #ccc;
+    padding: 0 10px;
+}
+.coagent li a.pdl b {
+    width: 19px;
+    height: 18px;
+    display: block;
+    background: url(../../img/itour/common/QQ-weixin.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 16px;
+}
+.coagent li a.pdl b.QQ-icon {
+    background-position: 0 0;
+}
+.coagent li a.pdl b.weixin-icon {
+    background-position: -20px 0;
+}
+.coagent li.extra-r {
+    float: right;
+}
+.coagent .regist-link {
+    color: #0088FF;
+    font-size: 14px;
+}
+.coagent .regist-link a {
+    color: #0088FF;
+}
+.coagent .regist-link b {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(../../img/itour/common/pwd-icons-new.png) -104px -75px no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.coagent ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.login-wrap .login-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 475px;
+    background: #0077E6;
+}
+.login-wrap .i-inner {
+    position: relative;
+    z-index: 3;
+    height: 475px;
 }
