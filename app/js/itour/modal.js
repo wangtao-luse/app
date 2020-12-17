@@ -72,6 +72,14 @@ $(function(){
 	        appendTag(t);
 	    }
 	});
+	
+	$(".modal-closeButton").click(function(){
+		$(".modal-wrapper").hide();
+	})
+	$(".favlists-addButton").click(function(){
+		$(this).closest(".modal-wrapper").hide();
+		$(".article_add_collect").show();
+	});
 });
 //追加话题标签
 function appendTag(t){

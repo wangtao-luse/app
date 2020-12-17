@@ -107,6 +107,9 @@
 	left: 11px;
 	
 }
+.select-cover__btn:hover {
+    background-color: #f6f8f9;
+}
 .select-cover__btn .btn-text {
     display: block;
 }
