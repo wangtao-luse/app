@@ -80,6 +80,13 @@ $(function(){
 		$(this).closest(".modal-wrapper").hide();
 		$(".article_add_collect").show();
 	});
+	//验证码
+	$(".itour-close").click(function(){
+		$("#itour-wrap-loginsubmit").hide();
+	});
+	$(".slide-authCode-wrape .close").click(function(){
+		$(".slide-authCode-wrape").hide();
+	});
 });
 //追加话题标签
 function appendTag(t){

@@ -796,6 +796,7 @@ overflow: hidden;
 #footer .container{
 	width: 1000px;
 	background: #fff;
+	margin: 0 auto;
 }
 #footer .copyright{
 	text-align: center;
@@ -1352,3 +1353,441 @@ border-radius: 2px;
 
 /**SEARCH页面end**/
 
+/***登录页面start***/
+.login-head-wrap{
+	background: #fff;
+	height: 80px;
+}
+.w{
+	width: 1000px;
+	margin: 0 auto;
+}
+.logo {
+    position: relative;
+    width: 300px;
+    margin: 10px 0;
+    height: 60px;
+    float: left;
+}
+.logo .welcome {
+    height: 60px;
+    line-height: 60px;
+    width: 110px;
+    font-size: 26px;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #666;
+}
+#content{
+	clear: both;
+}
+.login-wrap {
+    position: relative;
+    height: 475px;
+    margin: 10px 0 20px;
+    z-index: 5;
+}
+#content .login-wrap {
+    margin-top: 0;
+}
+.login-form {
+    position: relative;
+    z-index: 4;
+    background: #fff;
+    overflow: visible;
+    width: 346px;
+}
+.login-wrap .login-form {
+    float: right;
+    top: 10px;
+}
+#content .tips-wrapper {
+    background: #fff8f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+#content .tips-wrapper .cont-wrapper {
+    display: inline-block;
+    *display: inline;
+    width: 90%;
+}
+#content .tips-wrapper .icon-tips {
+    background: url(../../img/itour/common/icon-tips.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+#content .tips-wrapper .tips-inner p {
+    vertical-align: middle;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+    *display: inline;
+}
+.login-form .login-tab {
+    height: 54px;
+    font-size: 18px;
+    font-family: inherit;
+    text-align: center;
+    border-bottom: 1px solid #f4f4f4;
+    position: absolute;
+    background: #fff;
+    display: block;
+}
+.login-form .login-tab-c {
+    width: 100%;
+}
+.login-form .login-tab a {
+    width: 99%;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 18px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+.login-form .login-box {
+    width: 306px;
+    padding: 20px;
+    visibility: hidden;
+}
+.login-form .login-box .mt {
+    display: block;
+    width: 306px;
+    overflow: visible;
+    height: 27px;
+}
+.login-form .login-box .tab-h {
+    height: 35px;
+}
+.login-form .login-box .mt:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.login-form .msg-wrap {
+    min-height: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: auto!important;
+}
+.hide {
+    display: none;
+}
+.login-form .msg-error {
+    position: relative;
+    background: #ffebeb;
+    color: #e4393c;
+    border: 1px solid #faccc6;
+    padding: 3px 10px 3px 40px;
+    line-height: 15px;
+    height: auto;
+}
+.login-form .login-box .mc {
+    overflow: visible;
+}
+.form .item {
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+.form .item-fore1, .form .item-fore2 {
+    border: 1px solid #bdbdbd;
+    height: 38px;
+    width: 304px;
+}
+.form .item-fore1 {
+    z-index: 6;
+}
+.form label {
+    float: none;
+}
+.form .item .login-label {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-right: 1px solid #bdbdbd;
+    background: url(../../img/itour/common/pwd-icons-new.png) no-repeat;
+}
+.form .item .name-label {
+    background-position: 0 0;
+}
+.login-form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+.form .itxt {
+    line-height: 18px;
+    height: 18px;
+    border: 0;
+    padding: 10px 0 10px 50px;
+    width: 254px;
+    float: none;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: '\5b8b\4f53';
+    *margin: -1px 0 0;
+}
+.form .item-fore1 .clear-btn, .form .item-fore2 .clear-btn {
+    position: absolute;
+    z-index: 20;
+    right: 6px;
+    top: 12px;
+    width: 14px;
+    height: 14px;
+    background: url(../../img/itour/common/pwd-icons-new.png) -25px -143px no-repeat;
+    cursor: pointer;
+    display: none;
+}
+.form input[type=password] {
+    font-family: Tahoma,Helvetica,Arial;
+}
+.form .item-fore1 .capslock, .form .item-fore2 .capslock {
+    position: absolute;
+    z-index: 4;
+    display: none;
+    width: 106px;
+    top: 28px;
+    left: 50px;
+    padding-left: 26px;
+    height: 26px;
+    line-height: 28px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+    background: url(../../img/itour/common/capslock.png) no-repeat;
+}
+.form .item-fore1 .capslock b, .form .item-fore2 .capslock b {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 10px;
+    height: 14px;
+    overflow: hidden;
+    background: url(../../img/itour/common/pwd-icons-new.png) -104px -133px no-repeat;
+}
+.form .item .pwd-label {
+    background-position: -48px 0;
+}
+.form .item-error .pwd-label {
+    background-position: -48px -96px;
+    border-color: #e4393c;
+}
+.form .item-fore3 {
+    z-index: 5;
+    margin-bottom: 13px;
+}
+.form .item-fore3.hide {
+    margin-bottom: 0;
+}
+.form #o-authcode.item {
+    border: 0;
+}
+.form .itxt02 {
+    padding: 10px 5px;
+    width: 150px;
+    text-align: center;
+}
+
+.form #o-authcode.item .itxt {
+    border: 1px solid #bdbdbd;
+    font-size: 14px;
+    padding: 7px 5px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.form .verify-code {
+    cursor: pointer;
+    width: 90px;
+    height: 33px;
+    vertical-align: middle;
+}
+.form .item-vcode .itxt02, .form .item-vcode .verify-code {
+    float: left;
+}
+.form .item-vcode a {
+    display: inline-block;
+    width: 38px;
+    float: right;
+    font-size: 12px;
+    color: #666;
+}
+.form .item-vcode a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+.login-form .login-box .safe {
+    position: relative;
+    color: #666;
+    *float: left;
+    *width: 305px;
+}
+.login-form .login-box .safe span {
+    margin-right: 15px;
+    *float: left;
+}
+.login-form .login-box .safe .forget-pw-safe {
+    position: absolute;
+    *float: right;
+    *position: static;
+    right: 0;
+    top: 0;
+    margin: 0;
+}
+.login-form .login-box .safe .forget-pw-safe:hover{
+	color: #007BFF;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.form .item-fore5 {
+    margin-bottom: 10px;
+}
+.login-form .login-box .login-btn {
+    border: 1px solid #007BFF;
+    margin: 0 auto;
+    height: 32px;
+    width: 99%;
+    position: relative;
+}
+.login-form .btn-img, .button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.login-form .login-box .login-btn .btn-img {
+    border: 1px solid #007BFF;
+    display: block;
+    width: 302px;
+    background: #0080FF;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Microsoft YaHei';
+}
+.login-form .msg-error b {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: block;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(../../img/itour/common/pwd-icons-new.png) -104px -49px no-repeat;
+}
+.form .item-error {
+    border: 1px solid #e4393c;
+}
+.form .item-error .name-label {
+    background-position: 0 -96px;
+    border-color: #e4393c;
+}
+.coagent {
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 50px;
+    border-top: 1px solid #f4f4f4;
+    height: auto;
+    background-color: #fcfcfc;
+}
+.coagent ul {
+    display: inline-block;
+    display: block;
+}
+.coagent li {
+    float: left;
+}
+.coagent a {
+    color: #666;
+    text-decoration: none;
+}
+.coagent li a.pdl {
+    display: inline-block;
+    position: relative;
+    padding-left: 24px;
+}
+.coagent li span{
+	font-size: 11px;
+}
+.coagent li span:hover{
+	color: #007BFF;
+	text-decoration: underline;
+}
+.coagent li .line {
+    color: #ccc;
+    padding: 0 10px;
+}
+.coagent li a.pdl b {
+    width: 19px;
+    height: 18px;
+    display: block;
+    background: url(../../img/itour/common/QQ-weixin.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 16px;
+}
+.coagent li a.pdl b.QQ-icon {
+    background-position: 0 0;
+}
+.coagent li a.pdl b.weixin-icon {
+    background-position: -20px 0;
+}
+.coagent li.extra-r {
+    float: right;
+}
+.coagent .regist-link {
+    color: #0088FF;
+    font-size: 14px;
+}
+.coagent .regist-link a {
+    color: #0088FF;
+}
+.coagent .regist-link b {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(../../img/itour/common/pwd-icons-new.png) -104px -75px no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.coagent ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.login-wrap .login-banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 475px;
+    background: #0077E6;
+}
+.login-wrap .i-inner {
+    position: relative;
+    z-index: 3;
+    height: 475px;
+}

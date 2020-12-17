@@ -420,4 +420,437 @@ input[type="checkbox"], input[type="radio"] {
     min-width: 100px;
 }
 
+/****验证码开始**/
+.itour-suspend-warp {
+    position: relative;
+}
+.itour-bind-suspend-wrap, .itour-i-dsc-wrap, .itour-i-pic-click-wrap {
+    position: absolute;
+    display: none;
+}
+.itour-suspend-warp .itour-suspend-slide,
+.itour-suspend-warp .itour-suspend-i-dsc,
+.itour-suspend-warp .itour-suspend-i-pic-click {
+    display: none;
+    line-height: 1.5;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    background-color: #fff;
+    z-index: 2147483647;
+    box-shadow: 0 0 2px 2px #eee;
+    border: 1px solid #eee;
+    width: auto;
+    height: auto;
+    padding: 18px 12px;
+}
+.itour-bind-suspend-wrap .itour-suspend-slide, 
+.itour-bind-suspend-wrap .itour-suspend-i-dsc,
+.itour-bind-suspend-wrap .itour-suspend-i-pic-click,
+.itour-i-dsc-wrap .itour-suspend-slide,
+.itour-i-dsc-wrap .itour-suspend-i-dsc,
+.itour-i-dsc-wrap .itour-suspend-i-pic-click, 
+.itour-i-pic-click-wrap .itour-suspend-slide, 
+.itour-i-pic-click-wrap .itour-suspend-i-dsc, 
+.itour-i-pic-click-wrap .itour-suspend-i-pic-click {
+    position: relative;
+    display: block;
+    bottom: 0;
+}
+.itour-suspend-warp .itour-suspend-slide,
+.itour-suspend-warp .itour-suspend-i-dsc {
+    *+overflow: hidden;
+}
+.itourValidate-wrap * {
+    margin: 0;
+    padding: 0;
+}
+.itour-suspend-warp .itour-close {
+    z-index: 2147483647;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../../img/itour/common/x.png);
+}
+.itour-suspend-warp .itour-arrow {
+    z-index: 2147483647;
+    display: block;
+    position: absolute;
+    background-image: url(../../img/itour/common/tips.gif);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 8px;
+    background-position: 0 -8px;
+    overflow: hidden;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.itourValidate-wrap .itour-slide, 
+.itourValidate-wrap .itour-dsc, 
+.itourValidate-wrap .itour-pic-click {
+    position: relative;
+    font-family: inherit;
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+}
+.itourValidate-wrap .itour-embed, 
+.itourValidate-wrap .itour-bind, 
+.itourValidate-wrap .itour-popup, 
+.itourValidate-wrap .itour-click-popup, 
+.itourValidate-wrap .itour-click-suspend, 
+.itourValidate-wrap .itour-click-bind-suspend {
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    visibility: visible;
+}
+.itourValidate-wrap .itour-img-panel .itour-refresh {
+    height: 25px;
+}
+.itourValidate-wrap .itour-img-panel .itour-lable-refresh {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 59%;
+    float: left;
+}
+.itourValidate-wrap .itour-img-panel .itour-img-refresh {
+    position: relative;
+    float: right;
+    padding-right: 0;
+    height: 20px;
+    cursor: pointer;
+    color: #06c;
+}
+.itourValidate-wrap .itour-img-panel .itour-img-refresh span {
+    float: right;
+}
+.itourValidate-wrap .itour-img-panel .itour-img-refresh div {
+    background: url(../../img/itour/common/refresh2.png) center center no-repeat;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+.itourValidate-wrap .itour-img-panel .itour-img-wrap {
+    position: relative;
+    width: 100%;
+}
+.itourValidate-wrap .itour-img-panel .itour-bigimg {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.itourValidate-wrap .itour-img-panel .itour-bigimg img {
+    border-radius: 3px;
+    width: 100%;
+}
+.itourValidate-wrap .itour-img-panel .itour-smallimg {
+    touch-action: none;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 50px;
+}
+.itourValidate-wrap .itour-img-panel .itour-smallimg img {
+    width: 100%;
+}
+.itourValidate-wrap .itour-slide-bg {
+    height: 40px;
+    position: relative;
+}
+.itourValidate-wrap .itour-slide-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.itourValidate-wrap .itour-slide-text {
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    visibility: visible;
+    opacity: 1;
+    color: #10b2fa;
+}
+.itourValidate-wrap .itour-slide-text .itour-slide-left {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url(../../img/itour/common/slide-left-icon2.png) no-repeat;
+}
+.itourValidate-wrap .itour-slide-text .itour-slide-center {
+    background-image: url(../../img/itour/common/slide-center-bg.png);
+    margin-left: 40px;
+    margin-right: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.itourValidate-wrap .itour-slide-text .itour-slide-right {
+    width: 40px;
+    height: 40px;
+    background: url(../../img/itour/common/slide-right-icon2.png) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.itourValidate-wrap .itour-slide-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.itourValidate-wrap .itour-slide-bar {
+    display: none;
+    width: 44px;
+    border-radius: 30px;
+    -moz-transition: background .4s ease;
+    -o-transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+    transition: background .4s ease;
+}
+.itourValidate-wrap .itour-slide-bar .itour-slide-bar-left {
+    background: url(../../img/itour/common/slide-bar-left2.png) no-repeat;
+    width: 24px;
+    height: 40px;
+    float: left;
+}
+.itourValidate-wrap .itour-slide-err .itour-slide-bar .itour-slide-bar-left {
+ background:url(../../img/itour/common/slide-bar-err-left2.png) no-repeat
+}
+.itourValidate-wrap .itour-slide-bar .itour-slide-bar-center {
+    background-image: url(../../img/itour/common/slide-bar-bg.png);
+    margin-left: 24px;
+    margin-right: 25px;
+    color: #fff;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.itourValidate-wrap .itour-slide-err .itour-slide-bar .itour-slide-bar-center {
+ background-image:url(../../img/itour/common/slide-bar-err-bg.png)
+}
+.itourValidate-wrap .itour-slide-bar .itour-slide-bar-right {
+    display: none;
+    width: 25px;
+    height: 40px;
+    background: url(../../img/itour/common/slide-bar-right2.png) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
+.itourValidate-wrap .itour-slide-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.itourValidate-wrap .itour-slide-btn {
+    margin-top: -6px;
+    margin-left: -6px;
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    background: url(../../img/itour/common/itour-slide-btn2.png) no-repeat;
+    cursor: pointer;
+    touch-action: none;
+}
+
+/****验证码结束**/
+
+/****找回密码start * ****/
+.auth-wrap{
+	background: #fff;
+}
+.header-f{
+	height: 110px;
+    background: url(../../img/itour/common/headbg.jpg) repeat-x 0 100%;
+}
+.header-f .i-logo {
+    width: 160px;
+    height: 50px;
+    float: left;
+    background: url(../../img/itour/common/itour-logo.png) no-repeat;
+    line-height: 99em;
+    overflow: hidden;
+    background-size: 70%;
+    position: inherit;
+    margin-top: 24px;
+}
+.header-f .logo-title {
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    font-size: 24px;
+    color: #333;
+    margin-top:44px;
+}
+.form-wrap {
+    width: 402px;
+    margin: 0 auto;
+    font-size: 12px ;
+}
+.setnew-wrap {
+    margin-top: 85px;
+}
+.form-wrap .form-item {
+    min-width: 400px;
+    min-height: 62px;
+    margin-bottom: 15px;
+}
+.form-wrap .form-item .item-rcol {
+    display: block;
+}
+.form-wrap .form-item .item-input-wrap {
+    position: relative;
+    float: left;
+    width: 193px;
+    height: 50px;
+    margin-left: -1px;
+    border: 1px solid #ddd;
+}
+.form-wrap .form-item .item-input-xl {
+    width: 398px;
+}
+.form-wrap .form-item .field {
+    position: relative;
+    border: 0;
+    font-size: 14px;
+    z-index: 2;
+    width: 144px;
+    height: 20px;
+    line-height: 20px;
+    padding: 15px 0 15px 15px;
+    text-align: left;
+    background: transparent;
+    font-family: inherit;
+}
+.form-wrap .form-item .item-input-xl .field {
+    width: 306px;
+}
+.form-wrap .form-item .i-ops {
+    position: absolute;
+    z-index: 10;
+    height: 50px;
+    line-height: 50px;
+    right: 0;
+    text-align: right;
+}
+.form-wrap .form-item .input-error {
+    clear: both;
+    padding: 5px 0 0;
+    color: #f83;
+}
+.form-wrap .form-item .item-rcol:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.form-item-validate {
+    position: relative;
+}
+.ac {
+    text-align: center;
+}
+.btn-l, .btn-xl {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.btn-xl {
+    width: 400px;
+}
+.btn-check-defaut {
+    font-family: Microsoft YaHei;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #999;
+    letter-spacing: -.25px;
+}
+.btn-check-defaut .icon-click {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 18px;
+    background: url(../../img/itour/common/click.png) no-repeat;
+    overflow: hidden;
+    margin-right: 7px;
+}
+.btn-primary.disable {
+    background: #0084FF;
+    border-color: #0084FF;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.slide-authCode-wrape {
+    display: block;
+    line-height: 1.5;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: 65px;
+    font-family: inherit;
+    background-color: #fff;
+    cursor: default;
+    z-index: 110;
+    box-shadow: 0 0 2px 2px #eee;
+    border: 1px solid #eee;
+    width: 364px;
+    height: 216.5px;
+    padding: 12px 12px 12px 20px;
+}
+.slide-authCode-wrape .arrow {
+    display: block;
+    position: absolute;
+    background-image: url(../../img/itour/common/tips.gif);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 8px;
+    background-position: 0 -8px;
+    overflow: hidden;
+    bottom: -8px;
+    left: 190px;
+}
+.slide-authCode-wrape .close {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../../img/itour/common/x.png);
+}
+.slide-authCode-wrape .itour-refresh {
+    margin-right: 25px!important;
+}
+.form-wrap .form-item .input-error .icon-warn {
+    font-size: 16px;
+    margin-right: 4px;
+}
+.icon-warn {
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../img/itour/common/icon-warn.png) no-repeat;
+    
+}
+/****找回密码end * ****/
