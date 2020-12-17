@@ -22,7 +22,6 @@ a{
 }
 button, input, select, textarea {
     font-family: inherit;
-    font-size: 100%;
     margin: 0;
     outline: 0;
 }
@@ -189,9 +188,3 @@ h1, h2, h3 {
     pointer-events: none;
 }
 
-/***
- * 690
- * 768
- * 992
- * 1200
- */

@@ -87,6 +87,9 @@ float: left;
     box-sizing: border-box;
     border-radius: 16px 0 0 16px;
 }
+#itour-banner .banner-serach .banner-serach-container input:focus{
+	border: 1px solid #0077E6;
+}
 #itour-banner .banner-serach .banner-serach-container button{
 	display: inline-block;
 	width: 40px;

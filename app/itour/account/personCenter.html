@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/itour/common.css" />
+		<link rel="stylesheet" href="../../css/itour/index.css" />
+		<script type="text/javascript" src="../../js/common/jquery-3.4.1.js.js" ></script>
+		<script type="text/javascript" src="../../js/itour/index.js" ></script>
+		<style>
+			.userCenter{
+				background: #fff;
+				 -webkit-box-shadow: 0 1px 3px rgba(18,18,18,.1);
+			    box-shadow: 0 1px 3px rgba(18,18,18,.1);
+			    -webkit-box-sizing: border-box;
+			}
+			.infoMsgHead{
+				height: 120px;
+			    width: 1000px;
+			    margin: 0 auto;
+			    position: relative;			   
+			}
+			.infoMsgHead .infoMsgHead-inner{
+				width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    left: 50%;
+			    -webkit-transform: translate(-50%);
+			    transform: translate(-50%);
+			    display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: flex;
+			}
+			.infoMsgHead .infoMsgHead-inner .user-left {
+			    float: left;
+			    padding: 18px 48px 0 40px;
+			}
+			.infoMsgHead .infoMsgHead-inner .user-left .user-img {
+			    width: 80px;
+			    height: 80px;
+			    border-radius: 50%;
+			    overflow: hidden;
+			    position: relative;
+			    cursor: pointer;
+			    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #0084FF, 0 8px 16px 0 rgba(0,0,0,0.15)
+			}
+			.infoMsgHead .infoMsgHead-inner .user-left .user-img img {
+			    width: 100%;
+			    height: 100%;
+			}
+			
+			.infoMsgHead .infoMsgHead-inner .user-left p {
+			    color: #121212;
+			    font-size: 13px;
+			    text-align: center;
+			    margin-top: 8px;
+			}
+			
+			.infoMsgHead .infoMsgHead-inner .user-left .user-img p {
+			    color: #fff;
+			    font-size: 12px;
+			    text-align: center;
+			    position: absolute;
+			    bottom: 0;
+			    width: 100%;
+			    height: 24px;
+			    line-height: 24px;
+			    display: none;
+			    background: rgba(0,0,0,.8);
+			}
+			.infoMsgHead .infoMsgHead-inner .user-left .user-img:hover p {
+			    display: block;
+			}
+			.infoMsgHead .infoMsgHead-inner .user-info {
+			    float: left;
+			    padding-top: 40px;
+			    color: #fff;
+			    font-size: 16px;
+			    -webkit-box-flex: 1;
+			    -ms-flex: 1;
+			    flex: 1;
+			    padding-right: 24px;
+			}
+			.infoMsgHead .infoMsgHead-inner .user-info span {
+			    display: inline-block;
+			    height: 100%;
+			    line-height: 32px;
+			    text-align: center;
+			    vertical-align: bottom;
+			    font-weight: 600;
+			    font-size: 16px;
+			    color: #121212;
+			}
+			.infoMsgHead .infoMsgHead-inner .user-info .id-msg .user-id {
+		   		 margin-right: 4px;
+		   		 line-height: 30px;
+		   		 font-weight: 600;
+		   		 font-size: 26px;
+			}			
+			.infoMsgHead .infoMsgHead-inner .user-info .id-msg .adv-cer {
+			    float: right;
+			    padding: 0 12px;
+			    height: 28px;
+			    border-radius: 14px;
+			    line-height: 28px;
+			    color: #fff;
+			    font-weight: 400;
+			    cursor: pointer;
+			    font-size: 14px;
+			}
+			
+				</style>
+	</head>
+	<body>
+		<div id="itour-banner">
+			<div class="bnner-inside">
+				<div class="banner-container">
+					<div class="banner-logo itour-banner-fl">
+						<a href="#"><img src="../../img/itour/common/itour-logo.png" /></a>
+					</div>
+					<ul class="banner-menus itour-banner-fl">
+						<li><a href="#" target="_blank">首页</a></li>
+						<li><a href="#" target="_blank">博客</a></li>
+						<li><a href="#" target="_blank">寻觅佳人</a></li>
+						<li><a href="#" target="_blank">发现网站</a></li>
+					</ul>
+					<div class="banner-serach itour-banner-fl">
+						<div class="banner-serach-container">
+							<input type="text" class="banner-search-input" maxlength="100" autocomplete="off" placeholder="上海有那些好玩的地方"/>
+						<button type="button" class="banner-search-button"></button>
+						</div>
+						
+					</div>
+					<div class="banner-btns itour-banner-fr">
+						<div class="banner-btn banner-btn-write toolbar-subMenu-box itour-banner-fl">
+							<a href="#">
+								<i></i>创作中心
+							</a>
+							<div class="toolbar-subMenu">
+								<a href="#">写博客</a>
+							    <a href="#">写攻略</a>
+							</div>
+						</div>
+					    <a href="#" target="_blank" class="banner-btn banner-btn-collect itour-banner-fl">收藏</a>
+					   <div class="banner-btn banner-btn-msg  itour-banner-fl">
+					   	 <div class="toolbar-subMenu-box">
+					   	 	  <a href="#" target="_blank">消息</a>
+						   	  <div class="toolbar-subMenu">
+						   	  	<a href="#">公告</a>
+						   	  	<a href="#">评论</a>
+						   	  	<a href="#">关注</a>
+						   	  	<a href="#">点赞</a>
+						   	  	<a href="#">私信</a>
+						   	  	<a href="#">回答</a>
+						   	  	<a href="#">系统通知</a>
+						   	  	<a href="#">消息设置</a>
+						     </div>
+					   	 </div>					   	 
+					   </div>
+					   <div class="banner-btn-login itour-banner-fl toolbar-subMenu-box" style="display: block;">
+					   	 <a class="hasAvatar" href="#"><img src="../../img/itour/common/avatar-1.jpg" /></a>
+					   	 <div class="toolbar-subMenu">
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-profile"></i>我的主页</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-mp"></i>攻略管理</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-blog"></i>我的博客</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-account"></i>设置</a>
+					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-logout"></i>退出</a>
+					   	 </div>
+					   </div>
+					   <div class="banner-btn-login itour-banner-fl" style="display: none;">
+					   	   <a class="" href="#">登录</a>
+					   	   <a class="" href="#">注册</a>
+					   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div class="userCenter">
+	    	<div class="infoMsgHead">
+	    		<div class="infoMsgHead-inner">
+	    			<div class="user-left">
+	    				<div class="user-img">
+	    					<img src="../../img/itour/common/avatar-1.jpg" />
+	    					<p class="modify-img">上传头像</p>
+	    				</div>
+	    				
+	    			</div>
+	    			<div class="user-info">
+	    				<p class="id-msg">
+	    					<span class="user-id">爱旅行SHOW</span>
+	    					<span class="adv-cer">
+	    						<button type="button" class="button button--blue">编辑个人资料</button>
+	    					</span>
+	    					
+	    				</p>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</body>
+</html>
