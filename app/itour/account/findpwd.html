@@ -13,20 +13,22 @@
 	<body>
 		
 	    <div class="auth-wrap">
-	    	<div class="header-f">
+	    	<div class="header">
 	    		<div class="logo-con w clearfix">
-	    			<a href="#" class="i-logo"></a>
+	    			<a href="#" class="itour-logo"></a>
 	    			<div class="logo-title">找回密码</div>
 	    			
 	    		</div>
 	    	</div>
-	        <div class="form-wrap setnew-wrap">
+	        <div class="form-wrap setnew-wrap findpwd-step1">
 	        	<div class="form-item">
 	        		<span class="label hide"></span>
 	        		<div class="item-rcol">
 	        			<div class="item-input-wrap item-input-xl">
 	        				<input type="text" class="field" placeholder="请输入用户名/邮箱/已验证手机号" value="">
-	        				<span class="i-ops"></span>	        				
+	        				<span class="i-ops">
+	        					<span class="i-cancel iconfont icon-delete" ></span>
+	        				</span>	        				
 	        			</div>
 	        			<div class="input-error hide">
 	        				<i cite="i-error iconfont icon-warn"></i>
@@ -83,6 +85,38 @@
 	            	<button type="button" class="btn-primary btn-xl disable">下一步</button>
 	            </div>
 	        </div>
+	        <div class="form-wrap setnew-wrap findpwd-step2">
+	        	<div class="form-title form-title-left">设置新密码</div>
+	        	<div class="form-item clearfix">
+	        		<div class="item-input-wrap item-input-xl item-input-xl">
+	        			<input type="password" class="field" placeholder="请输入新密码" maxlength="20" value="">
+	        			<span class="i-ops">
+	        				<span class="i-status iconfont icon-done"></span>
+	        				<span class="i-cancel iconfont icon-delete"></span>
+	        				<span class="icon-yanjing iconfont"></span>
+	        			</span>
+	        		</div>
+	        		<div class="input-tips">
+	        			<div class="input-error">
+	        				<i class="i-error iconfont icon-warn"></i>
+	        				请将密码设置为8-20位，并且由字母，数字和符号两种以上组合
+	        			</div>
+	        		</div>
+	        		
+	        		
+	        	</div>
+	        	<div class="form-item ac">
+	        		<button type="button" class="btn-primary btn-xl disable">提交</button>
+	        	</div>
+	        </div>
 	    </div>
+		<footer id="footer">
+	    	<div class="container">
+	    		<div class="copyright">
+	    			Copyright&nbsp;©&nbsp;2020-2021 &nbsp;&nbsp;爱旅行SHOW&nbsp;wangtao.com&nbsp;版权所有<br>
+	    		<a href="http://beian.miit.gov.cn" rel="nofollow">湘ICP备2020018917号</a>
+	    		</div>	    		
+	    	</div>
+	    </footer>
 	</body>
 </html>

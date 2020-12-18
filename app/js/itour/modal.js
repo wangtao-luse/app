@@ -87,6 +87,10 @@ $(function(){
 	$(".slide-authCode-wrape .close").click(function(){
 		$(".slide-authCode-wrape").hide();
 	});
+	
+	$(".setnew-wrap button.btn-check-defaut").click(function(){
+		$(".slide-authCode-wrape").show();
+	})
 });
 //追加话题标签
 function appendTag(t){

@@ -675,12 +675,13 @@ input[type="checkbox"], input[type="radio"] {
 /****找回密码start * ****/
 .auth-wrap{
 	background: #fff;
+	min-height: 700px;
 }
-.header-f{
+.header{
 	height: 110px;
     background: url(../../img/itour/common/headbg.jpg) repeat-x 0 100%;
 }
-.header-f .i-logo {
+.header .itour-logo {
     width: 160px;
     height: 50px;
     float: left;
@@ -691,13 +692,22 @@ input[type="checkbox"], input[type="radio"] {
     position: inherit;
     margin-top: 24px;
 }
-.header-f .logo-title {
+.header .logo-title {
     float: left;
     height: 34px;
     line-height: 34px;
     font-size: 24px;
     color: #333;
     margin-top:44px;
+}
+.header .have-account {
+    font-size: 16px;
+    float: right;
+    margin-top: 55px;
+    color: #999;
+}
+.header .have-account a {
+    color: #0088FF;
 }
 .form-wrap {
     width: 402px;
@@ -722,6 +732,9 @@ input[type="checkbox"], input[type="radio"] {
     height: 50px;
     margin-left: -1px;
     border: 1px solid #ddd;
+}
+.form-wrap .z-focuse .item-input-wrap{
+	border-color: #666;
 }
 .form-wrap .form-item .item-input-xl {
     width: 398px;
@@ -842,9 +855,49 @@ input[type="checkbox"], input[type="radio"] {
 .slide-authCode-wrape .itour-refresh {
     margin-right: 25px!important;
 }
+.form-wrap .form-item .input-error {
+    clear: both;
+    padding: 10px 0 0;
+    color: #f83;
+}
 .form-wrap .form-item .input-error .icon-warn {
     font-size: 16px;
     margin-right: 4px;
+}
+.form-wrap .form-item .icon-biyan, 
+.form-wrap .form-item .icon-delete,
+.form-wrap .form-item .icon-yanjing {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    color: #b0b0b0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;   
+}
+.form-wrap .form-item .icon-delete{
+	 background: url(../../img/itour/common/x.png) no-repeat;
+}
+.form-wrap .form-item .icon-biyan{
+	width: 24px;
+	height: 24px;
+	background: url(../../img/itour/common/icon-biyan.png)no-repeat;
+	
+}
+.form-wrap .form-item .icon-yanjing {
+	width: 24px;
+	height: 24px;
+	background: url(../../img/itour/common/icon-yanjing.png) no-repeat;
+	background-size: contain;
+	
+}
+.btn-check-succ .icon-done {
+    width: 18px;
+    height: 18px;
+    margin-right: 7px!important;
+    color: #0c8!important;
 }
 .icon-warn {
 	display: inline-block;
@@ -853,4 +906,30 @@ input[type="checkbox"], input[type="radio"] {
     background: url(../../img/itour/common/icon-warn.png) no-repeat;
     
 }
+.form-wrap .form-title {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+.form-wrap .form-title-left {
+    text-align: left;
+}
+.form-wrap .form-item .input-tips {
+    clear: both;
+    min-height: 24px;
+}
+.form-wrap .form-item .input-tips .icon-warn{
+	background-size: contain;
+	vertical-align: middle;
+}
+.findpwd-step2{
+	display: none;
+}
 /****找回密码end * ****/
+/***注册页面start***/
+.auth-container{
+	background: #fff;
+}
+
+/***注册页面end***/

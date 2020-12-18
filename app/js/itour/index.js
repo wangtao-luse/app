@@ -32,6 +32,25 @@ $(function(){
 		  $(this).text("文章设置");
 		}
 		
-	})
+	});
+	$(document).on("click",".item-input-wrap .i-ops .icon-yanjing",function(){
+		$(this).addClass("icon-biyan");
+		$(this).removeClass("icon-yanjing");
+		$(this).closest(".item-input-wrap").find(".field").attr("type","text");
+	});
+	$(document).on("click",".item-input-wrap .i-ops .icon-biyan",function(){
+		$(this).addClass("icon-yanjing");
+		$(this).removeClass("icon-biyan");
+		$(this).closest(".item-input-wrap").find(".field").attr("type","password");
+	});
+	
+	$(".form-wrap input").focus(function(){
+		$(this).closest(".form-item").addClass("z-focuse");
+		var v = $(this).val();
+		
+	});
+	$(".form-wrap input").blur(function(){
+		$(this).closest(".form-item").removeClass("z-focuse");
+	});
 	
 })
