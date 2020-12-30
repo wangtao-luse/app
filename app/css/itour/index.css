@@ -307,6 +307,9 @@ background-position-x: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.card:last-child {
+    margin-bottom: 0;
+}
 .topstory-noMarginCard{
 	margin-bottom: 0!important;
 }
@@ -372,6 +375,9 @@ padding: 16px 20px;
 	color: #121212;
 	margin-top: -4px;
 	margin-bottom: -4px;
+}
+.contentItem-title:hover{
+	color: #175199;
 }
 .richContent{
 	line-height: 1.67;
@@ -716,6 +722,9 @@ overflow: hidden;
     height: 24px;
     fill: #8590a6;
 }
+.loading-more{
+	border-top: 1px solid #f6f6f6;
+}
 .text-center{
 	text-align: center;
 }
@@ -828,10 +837,10 @@ overflow: hidden;
 .storyItem-isAnswer{
 	padding:20px;
 }
-.contentItem-meta{
+/*.contentItem-meta{
 	display: flex;
 	align-items: center;
-}
+}*/
 .authorInfo-wrap{
 	color: #0077E6	
 }
@@ -1207,7 +1216,7 @@ border-radius: 2px;
 	text-align: center;
 }
 .tabs-link.is-active{
-	font-weight: 600px;
+	font-weight: 600;
 }
 .tabs-link.is-active:after{
 	content: "";
@@ -1248,6 +1257,16 @@ border-radius: 2px;
 .list-item {
     position: relative;
     padding: 16px 20px;
+}
+.list-item+.list-item:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 20px;
+    display: block;
+    border-bottom: 1px solid #f6f6f6;
+    content: "";
 }
 .searchNoContent-wrapper {
     width: 100%;
@@ -1305,6 +1324,10 @@ border-radius: 2px;
 	margin-top: 0;
 	margin-bottom: 0;
 }
+.contentItem-meta{
+	font-size: 15px;
+    color: #646464;
+}
 .searchResult-Card .contentItem-meta{
 	margin-top: 4px;
 }
@@ -1352,6 +1375,7 @@ border-radius: 2px;
 }
 
 /**SEARCH页面end**/
+
 
 /***登录页面start***/
 .login-head-wrap{
@@ -1791,3 +1815,402 @@ border-radius: 2px;
     z-index: 3;
     height: 475px;
 }
+
+/****我的主页start***/
+
+	.userCenter{
+		background: #fff;
+		 -webkit-box-shadow: 0 1px 3px rgba(18,18,18,.1);
+	    box-shadow: 0 1px 3px rgba(18,18,18,.1);
+	    -webkit-box-sizing: border-box;
+	}
+	.infoMsgHead{
+		height: 120px;
+	    width: 1000px;
+	    margin: 0 auto;
+	    position: relative;			   
+	}
+	.infoMsgHead .infoMsgHead-inner{
+		width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    left: 50%;
+	    -webkit-transform: translate(-50%);
+	    transform: translate(-50%);
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	}
+	.infoMsgHead .infoMsgHead-inner .user-left {
+	    float: left;
+	    padding: 18px 48px 0 40px;
+	}
+	.infoMsgHead .infoMsgHead-inner .user-left .user-img {
+	    width: 80px;
+	    height: 80px;
+	    border-radius: 50%;
+	    overflow: hidden;
+	    position: relative;
+	    cursor: pointer;
+	    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #0084FF, 0 8px 16px 0 rgba(0,0,0,0.15)
+	}
+	.infoMsgHead .infoMsgHead-inner .user-left .user-img img {
+	    width: 100%;
+	    height: 100%;
+	}
+	
+	.infoMsgHead .infoMsgHead-inner .user-left p {
+	    color: #121212;
+	    font-size: 13px;
+	    text-align: center;
+	    margin-top: 8px;
+	}
+	
+	.infoMsgHead .infoMsgHead-inner .user-left .user-img p {
+	    color: #fff;
+	    font-size: 12px;
+	    text-align: center;
+	    position: absolute;
+	    bottom: 0;
+	    width: 100%;
+	    height: 24px;
+	    line-height: 24px;
+	    display: none;
+	    background: rgba(0,0,0,.8);
+	}
+	.infoMsgHead .infoMsgHead-inner .user-left .user-img:hover p {
+	    display: block;
+	}
+	.infoMsgHead .infoMsgHead-inner .user-info {
+	    float: left;
+	    padding-top: 40px;
+	    color: #fff;
+	    font-size: 16px;
+	    -webkit-box-flex: 1;
+	    -ms-flex: 1;
+	    flex: 1;
+	    padding-right: 24px;
+	}
+	.infoMsgHead .infoMsgHead-inner .user-info span {
+	    display: inline-block;
+	    height: 100%;
+	    line-height: 32px;
+	    text-align: center;
+	    vertical-align: bottom;
+	    font-weight: 600;
+	    font-size: 16px;
+	    color: #121212;
+	}
+	.infoMsgHead .infoMsgHead-inner .user-info .id-msg .user-id {
+   		 margin-right: 4px;
+   		 line-height: 30px;
+   		 font-weight: 600;
+   		 font-size: 26px;
+	}			
+	.infoMsgHead .infoMsgHead-inner .user-info .id-msg .adv-cer {
+	    float: right;
+	    padding: 0 12px;
+	    height: 28px;
+	    border-radius: 14px;
+	    line-height: 28px;
+	    color: #fff;
+	    font-weight: 400;
+	    cursor: pointer;
+	    font-size: 14px;
+	}
+	.profile-main{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		width: 1000px;
+		min-height: 100vh;
+		padding: 0 16px;
+		margin: 10px auto;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		
+	}
+	.profile-mainColumn {
+	 -ms-flex-negative: 0;
+	 flex-shrink: 0;
+	 width: 694px;
+	}
+	.profile-sideColumn{
+		-webkit-box-flex: 1;
+	    -ms-flex: 1 1;
+	    flex: 1 1;
+	    font-size: 14px;
+	}
+	.profileMain {
+	    overflow: visible;
+	    overflow: initial;
+	}
+	.tabs {
+	    border-bottom: 1px solid #f6f6f6;
+	}
+	.profileMain-tabs {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-box-flex: 1;
+	    -ms-flex: 1 1;
+	    flex: 1 1;
+	}
+	.profileMain-tabs .tabs-item {
+	    -ms-flex-negative: 0;
+	    flex-shrink: 0;
+	    padding: 0 12px;
+	}
+	.tabs-meta {
+	    margin-left: 6px;
+	    font-size: 14px;
+	    font-weight: 300;
+	    line-height: 20px;
+	    color: #999;
+	}
+	.profileMain-tabs .tabs-meta {
+	    font-weight: 400;
+	}
+	.list-header {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	    justify-content: space-between;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    height: 50px;
+	    margin: 0 20px;
+	    border-bottom: 1px solid #f6f6f6;
+	    -webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+	.list-headerText {
+	    margin: 0;
+	    font-weight: 600;
+	    font-synthesis: style;
+	}
+	.list-itemMeta {
+	    margin-bottom: 10px;
+	    color: #8590a6;
+	}
+	.activityItem-meta {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	}
+	.activityItem-metaTitle {
+	    -webkit-box-flex: 1;
+	    -ms-flex: 1 1;
+	    flex: 1 1;
+	}
+	.contentItem-title+.contentItem-meta {
+	    margin-top: 6px;
+	}
+	.authorInfo {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	}
+	
+	.answerItem-authorInfo {
+	    margin-top: 10px;
+	}
+	.authorInfo-avatar {
+	    vertical-align: top;
+	    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #0084FF, 0 8px 16px 0 rgba(0,0,0,0.15);
+	}
+	.authorInfo-content {
+	    -webkit-box-flex: 1;
+	    -ms-flex: 1 1;
+	    flex: 1 1;
+	    margin-left: 14px;
+	    overflow: hidden;
+	}
+	.authorInfo-head {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    font-size: 15px;
+	    line-height: 1.1;
+	    -ms-flex-negative: 0;
+	    flex-shrink: 0;
+	}
+	.authorInfo-name {
+	    color: #444;
+	    font-weight: 600;
+	    
+	}
+	.authorInfo-detail {
+	    overflow: hidden;
+	}
+	.authorInfo-badge {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    margin-top: 2px;
+	    font-size: 14px;
+	}
+	.authorInfo-badgeText {
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    color: #646464;
+	}
+	.css-h5al4j {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    color: #8590A6;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: -4px;
+}
+.voters {
+    color: #8590a6;
+}
+.list-headerOptions {
+    font-size: 14px;
+}
+.profile-writePosts {
+    line-height: 24px;
+    margin-right: 20px;
+    position: relative;
+}
+.profile-writePosts:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: #ebebeb;
+    right: -11px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.list-headerOptions, .profile-writePosts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.profile-writePostsText {
+    color: #0084ff;
+}
+.inputLike{
+	padding: 4px 10px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background .2s,border .2s;
+    transition: background .2s,border .2s;
+}
+.inputButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.select-button {
+    text-align: left;
+    padding-right: 4px;
+}
+.select-plainButton {
+    padding: 0;
+    border: 1px solid transparent;
+}
+.columnItem {
+    position: relative;
+}
+.contentItem-meta .columnItem-meta, 
+.contentItem-meta .topicItem-meta {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal;
+}
+.contentItem-status {
+    margin-top: 5px;
+    color: #8590a6;
+}
+.contentItem-status {
+    font-size: 14px;
+    font-weight: normal;
+}
+.contentItem-statusItem:not(:first-child):before {
+    margin: 0 5px;
+    content: "\B7";
+}
+.columnItem-more {
+    margin-left: 24px;
+}
+.contentItem-meta {
+font-size: 15px;
+color: #646464;
+}
+/****我的主页end***/
+/***创作中心start**/
+.appConsole .creator-container{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align:flex-start;
+	align-items: flex-start;
+	min-width: 1000px;
+	max-width: 1316px;
+	margin: 0 auto;
+	padding: 10px;
+}
+.appConsole .left-box{
+	width: 180px;
+	background: #fff;
+	min-height: 1240px;
+	max-height: 1580px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	
+}
+.appConsole .creator-wrp{
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background: #fff;
+	text-align: left;
+	padding-top: 20px;
+	margin-left: 8px;
+}
+/***创作中心End**/

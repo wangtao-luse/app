@@ -693,3 +693,90 @@ input[type="checkbox"], input[type="radio"] {
     opacity: 0.5;
     pointer-events: none;
 }
+
+
+/**popovercontent START***/
+.popover-content {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 5px 20px rgba(18,18,18,0.1);
+    box-shadow: 0 5px 20px rgba(18,18,18,0.1);
+    z-index: 203;
+}
+.popover-content--top {
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+    margin-top: -8px;
+}
+.popover-content--top.popover-content--arrowed {
+    margin-top: -16px;
+}
+.select-popoverTarget {
+    margin-top: 0;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+.select-list {
+    overflow: auto;
+    position: relative;
+    max-height: 500px;
+    padding: 8px 0;
+    border-radius: 4px;
+}
+.select-option {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    color: #8590a6;
+    text-align: left;
+    background: none;
+    border: none;
+}
+.select-option:focus {
+    outline: none;
+    -webkit-transition: -webkit-box-shadow 0.3s;
+    transition: -webkit-box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s,-webkit-box-shadow 0.3s;
+    background: #f6f6f6;
+}
+.columnItem-botton {
+    display: block;
+    width: 96px;
+    line-height: 40px;
+}
+.popover-arrow {
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+}
+.popover-arrow:after {
+    content: "";
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin: -12px;
+    border: 1px solid #ebebeb;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    pointer-events: auto;
+}
+.popover-arrow--top {
+    width: 32px;
+    height: 16px;
+    margin-top: -2px;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
+.popover-arrow--top:after {
+    left: 50%;
+    top: -8px;
+}
+/**popovercontent END***/
