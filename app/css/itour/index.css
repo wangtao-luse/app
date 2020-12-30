@@ -2177,3 +2177,40 @@ font-size: 15px;
 color: #646464;
 }
 /****我的主页end***/
+/***创作中心start**/
+.appConsole .creator-container{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align:flex-start;
+	align-items: flex-start;
+	min-width: 1000px;
+	max-width: 1316px;
+	margin: 0 auto;
+	padding: 10px;
+}
+.appConsole .left-box{
+	width: 180px;
+	background: #fff;
+	min-height: 1240px;
+	max-height: 1580px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	
+}
+.appConsole .creator-wrp{
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	background: #fff;
+	text-align: left;
+	padding-top: 20px;
+	margin-left: 8px;
+}
+/***创作中心End**/
