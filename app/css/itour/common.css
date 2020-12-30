@@ -104,6 +104,9 @@ h1, h2, h3 {
 .fr{
 	float: right;
 }
+.clear{
+	clear: both;
+}
 .btn{
 	display: inline-block;
 	min-width: 60px;

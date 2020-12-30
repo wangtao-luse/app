@@ -87,10 +87,20 @@ $(function(){
 	$(".slide-authCode-wrape .close").click(function(){
 		$(".slide-authCode-wrape").hide();
 	});
-	
+	$(".slide-authCode-wraper .close").click(function(){
+		$(".slide-authCode-wraper").hide();
+	});
 	$(".setnew-wrap button.btn-check-defaut").click(function(){
 		$(".slide-authCode-wrape").show();
 	})
+	 $("#step1-next").click(function(){
+    	$("#step1-wrap").css("display","none");
+    	$("#step2-wrap").css("display","block");
+    	$(".cur-step").addClass("done-step");
+    	$(".cur-step span").text("");
+    	$(".cur-step").removeClass("cur-step");    	
+    	$(".person-pro-step2").addClass("cur-step");
+   });
 });
 //追加话题标签
 function appendTag(t){
