@@ -53,4 +53,15 @@ $(function(){
 		$(this).closest(".form-item").removeClass("z-focuse");
 	});
 	
+	$(".appConsole .el-submenu__title").click(function(){
+		var hasclzz =$(this).closest("li").hasClass("is-opened");
+		if(hasclzz){
+			$(this).closest("li").removeClass("is-opened");
+			$(this).closest("li").find(".el-menu.el-menu--inline").css("display","none");
+		}else{
+			$(this).closest("li").addClass("is-opened");
+			$(this).closest("li").find(".el-menu.el-menu--inline").css("display","inline-block");
+		}
+		
+	})
 })
