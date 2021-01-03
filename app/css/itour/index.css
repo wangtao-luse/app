@@ -2459,8 +2459,53 @@ color: #646464;
 	flex: 1;
 	background: #fff;
 	text-align: left;
-	padding-top: 20px;
+	padding: 20px;
 	margin-left: 8px;
+	 box-shadow: 0 0 8px 0 rgba(0,0,0,0.02);
 }
 
+.weui-desktop-panel_transparent .weui-desktop-panel__hd{
+	padding-bottom: 24px;
+}
+.weui-desktop-global__info {
+    float: left;
+}
+.weui-desktop-panel__title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.title_rank_context, 
+.weui-desktop-panel__title,
+ .weui-desktop-search__wrp {
+    display: inline-block;
+    vertical-align: middle;
+}
+.weui-desktop-panel__title em {
+    font-style: normal;
+}
+.title_rank_context {
+    font-size: 0;
+}
+.title_rank_context .weui-desktop-tooltip__wrp {
+    margin-right: 4px;
+}
+.weui-desktop-icon-btn {
+    background-color: transparent;
+    padding: 0;
+    border-width: 0;
+    vertical-align: middle;
+    font-size: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.weui-desktop-icon-btn.weui-desktop-icon__list {
+    position: relative;
+}
+.weui-desktop-global__extra {
+    text-align: right;
+}
 /***创作中心End**/
+
+
+
