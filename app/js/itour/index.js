@@ -63,5 +63,6 @@ $(function(){
 			$(this).closest("li").find(".el-menu.el-menu--inline").css("display","inline-block");
 		}
 		
-	})
+	});
+	
 })
