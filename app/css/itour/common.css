@@ -94,6 +94,9 @@ button{
 li{
 	list-style-type: none;
 }
+em,i,u{
+	font-style: normal;
+}
 h1, h2, h3 {
     margin: 0;
     font: inherit;

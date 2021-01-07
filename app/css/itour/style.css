@@ -928,6 +928,12 @@ input[type="checkbox"], input[type="radio"] {
 }
 /****找回密码end * ****/
 /***注册页面start***/
+.i-def, .i-error, .i-error1, .i-global, .i-suc {
+    background: url(../../img/itour/common/icon.png) no-repeat;
+}
+.i-error {
+    background-position: -17px -100px;
+}
 .auth-container,.pro-container{
 	background: #fff;	
 }
@@ -1091,6 +1097,13 @@ input[type="checkbox"], input[type="radio"] {
     height: 27px;
     font-size: 12px;
     padding-top: 5px;
+}
+.input-tip span i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-top;
+    margin-right: 8px;
 }
 .form-item-getcode {
     line-height: 52px;
