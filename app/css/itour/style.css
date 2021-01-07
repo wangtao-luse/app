@@ -1030,7 +1030,7 @@ input[type="checkbox"], input[type="radio"] {
 .item-email-wrap {
     height: 86px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 .form-item {
     position: relative;
