@@ -40,6 +40,14 @@ textarea {
     resize: none;
     overflow-y: auto;
 }
+input::-ms-clear {
+	display: none
+}
+
+input::-ms-reveal {
+	width: 0;
+	height: 0
+}
 .clearfix{zoom:1}
 .clearfix:after{
 	content: ".";

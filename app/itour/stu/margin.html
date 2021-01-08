@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.item-email-wrap{
+				height: 86px;
+				position: relative;
+				z-index: 1
+			}
+			.form-item {
+			    position: relative;
+			    border: solid 1px #ddd;
+			    width: 398px;
+			    height: 52px;
+			    z-index: 11;
+		}
+		.form-item label {
+		    float: left;
+		    width: 87px;
+		    height: 50px;
+		    line-height: 50px;
+		    padding-left: 20px;
+		    color: #666;
+		}
+		.form-item .field {
+		    border: 0 none;
+		    font-size: 14px;
+		    width: 190px;
+		    height: 19px;
+		    padding-bottom: 11px;
+		    padding-left: 20px;
+		    padding-top: 16px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="item-email-wrap">
+            <div class="form-item">
+                <label>邮 箱 验 证</label>
+                <input type="text" name="email" id="form-email" class="field" autocomplete="off" maxlength="50" placeholder="请输入邮箱" default="<i class='i-def'></i>验证完成后，你可以使用该邮箱登录">
+                <i class="i-status"></i>
+                <ul class="suggest-container email-suggest" style="display: none;">
+                	<li class=""><div class="value">@qq.com</div></li>
+                	<li class=""><div class="value">@163.com</div></li>
+                	<li class=""><div class="value">@126.com</div></li>
+                	<li class=""><div class="value">@Gmail.com</div></li>
+                	<li class=""><div class="value">@Sohu.com</div></li>
+                	<li class="suggest-li-last "><div class="value">@Sina.com</div></li>
+                </ul>
+            </div>
+            <div class="input-tip">
+                <span></span>
+            </div>
+		                    </div>
+	</body>
+</html>
