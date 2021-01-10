@@ -102,6 +102,13 @@ $(".suggest-container.email-suggest li").click(function(){
 	$("#form-email").trigger("blur");
 });
 /**
+ * 点击按钮进行验证显示验证码
+ */
+$(".checkCode").click(function(){
+	 $(".slide-authCode-wraper").css("display","block");
+
+});
+/**
  * 清除错误信息
  * @param $this
  * @returns

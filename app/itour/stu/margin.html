@@ -4,6 +4,19 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
+			input{
+				outline: 0;
+				padding: 0;
+				margin: 0;
+			}
+			input::-ms-clear {
+	display: none
+}
+
+input::-ms-reveal {
+	width: 0;
+	height: 0
+}
 			.item-email-wrap{
 				height: 86px;
 				position: relative;
@@ -14,15 +27,19 @@
 			    border: solid 1px #ddd;
 			    width: 398px;
 			    height: 52px;
-			    z-index: 11;
+			    z-index: 0;
 		}
-		.form-item label {
+		.item-email-wrap .form-item {
+		    z-index: 11;
+		}
+			.form-item label {
 		    float: left;
 		    width: 87px;
 		    height: 50px;
 		    line-height: 50px;
 		    padding-left: 20px;
 		    color: #666;
+		    font-size:14px;
 		}
 		.form-item .field {
 		    border: 0 none;
@@ -36,6 +53,7 @@
 		</style>
 	</head>
 	<body>
+		<div id="step1-wrap">
 		<div class="item-email-wrap">
             <div class="form-item">
                 <label>邮 箱 验 证</label>
@@ -54,5 +72,6 @@
                 <span></span>
             </div>
 		                    </div>
+		 </div>
 	</body>
 </html>
