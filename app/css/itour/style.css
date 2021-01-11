@@ -561,6 +561,7 @@ input[type="checkbox"], input[type="radio"] {
 .itourValidate-wrap .itour-img-panel .itour-smallimg img {
     width: 100%;
 }
+
 .itourValidate-wrap .itour-slide-bg {
     height: 40px;
     position: relative;
@@ -626,6 +627,7 @@ input[type="checkbox"], input[type="radio"] {
 .itourValidate-wrap .itour-slide-err .itour-slide-bar .itour-slide-bar-left {
  background:url(../../img/itour/common/slide-bar-err-left2.png) no-repeat
 }
+
 .itourValidate-wrap .itour-slide-bar .itour-slide-bar-center {
     background-image: url(../../img/itour/common/slide-bar-bg.png);
     margin-left: 24px;
@@ -642,6 +644,7 @@ input[type="checkbox"], input[type="radio"] {
 .itourValidate-wrap .itour-slide-err .itour-slide-bar .itour-slide-bar-center {
  background-image:url(../../img/itour/common/slide-bar-err-bg.png)
 }
+
 .itourValidate-wrap .itour-slide-bar .itour-slide-bar-right {
     display: none;
     width: 25px;
@@ -1222,6 +1225,7 @@ input[type="checkbox"], input[type="radio"] {
     height: 216.5px;
     padding: 12px 12px 12px 20px;
 }
+
 .slide-authCode-wraper .close {
     cursor: pointer;
     z-index: 100;

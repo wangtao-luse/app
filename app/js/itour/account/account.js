@@ -22,20 +22,13 @@ $(function(){
 		console.log(dX+","+dY);	
 		
 	});
-	$.fn.mouseupWrap=function(callback){
-		var l = $(".itour-smallimg").offset().left;
-		var lastX = $(".itour-smallimg").offset().left - dX - 1; //---->需要研究
-		//修改鼠标拖拽标记
-		isMousedown=false;
-		callback(lastX);
-	};
+
 	//当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。
 	$(".itour-slide-btn").mousemove(function(e){
 		var event = e||event;
 		//鼠标滑动的x的坐标
 		var x = event.pageX;
-		console.log("X:"+x);
-		
+		console.log("X:"+x);		
 		if(isMousedown){
 			//鼠标滑动的x的坐标大于滑块区域x的坐标+30且滑块区域x的坐标+整个盒子的宽度-20-----》   需要研究
 			if(x>(dX+30) && x<dX+$(".itourValidate-wrap").width()-20){				
@@ -45,6 +38,10 @@ $(function(){
             }
 
 		}
+	});
+	//当鼠标指针移动到元素上方，并松开鼠标左键时;
+	$(".itourValidate-wrap").on("mouseup",".itour-slide-btn",function(e){
+		 $(".itourValidate-wrap .itour-slide").addClass("itour-slide-err");
 	});
 	
 /**
