@@ -41,7 +41,7 @@ $(function(){
 	});
 	//当鼠标指针移动到元素上方，并松开鼠标左键时;
 	$(".itourValidate-wrap").on("mouseup",".itour-slide-btn",function(e){
-		 $(".itourValidate-wrap .itour-slide").addClass("itour-slide-err");
+		 $(".itourValidate-wrap .itour-slide").addClass("itour-slide-err"); $(".itourValidate-wrap .itour-slide").isVisible()
 	});
 	
 /**
@@ -88,6 +88,21 @@ $("#form-email").blur(function(){
 	//清楚默认的提示信息
 	clearTip($(this));
 });	
+$("#form-email").change(function(){
+	console.log("change");
+	var email=$(this).val();	
+	if(test_email(email)){//校验通过
+		hideClose($(this));
+		showsucess($(this));
+		
+	}else{//校验失败
+		//显示错误信息		
+		email?showError($(this),"form-email-error","格式错误"):"";
+	}
+	//清楚默认的提示信息
+	clearTip($(this));
+});	
+
 /**
  * 鼠标释放时校验email
  */
