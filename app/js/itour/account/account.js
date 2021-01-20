@@ -168,6 +168,10 @@ $(".checkCode").click(function(){
 	 $(".slide-authCode-wraper").css("display","block");
 
 });
+
+$(".itour-slide-inner.itour-slide-btn").click(function(){
+	
+})
 /**
  * 清除错误信息
  * @param $this

@@ -1304,4 +1304,9 @@ input[type="checkbox"], input[type="radio"] {
 #step2-wrap .form-item:hover {
     border: 1px solid #999;
 }
+.btn-code-disable {
+    background: #f4f5f6;
+    color: #999;
+    cursor: default;
+}
 /***注册页面end***/
