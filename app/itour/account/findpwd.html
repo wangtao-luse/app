@@ -9,9 +9,25 @@
 		<script type="text/javascript" src="../../js/common/jquery-3.4.1.js.js" ></script>
 		<script type="text/javascript" src="../../js/itour/index.js" ></script>
 		<script type="text/javascript" src="../../js/itour/modal.js" ></script>
+		<style>
+			.findpwd-step1.form-wrap .form-item{
+				z-index: auto;
+			}
+		</style>
 	</head>
 	<body>
-		
+		<!--
+        	z-index:auto|number|inherit
+        	        auto:默认值，堆叠顺序与父元素相等;
+        	        number:设置元素的堆叠顺序;
+        	        inherit:从父元素继承 z-index 属性的值,IE不支持此属性;
+        	注意事项：
+        	 1.仅能在定位元素上奏效;
+        	 2.在有定位的情况下，该元素的z-index没有生效，
+        	      是因为该元素的子元素后来居上，盖住了该元素；
+        	      解决方式：
+        	      将盖住该元素的子元素的z-index设置为负数，而该元素不设z-index属性.
+        -->
 	    <div class="auth-wrap">
 	    	<div class="header">
 	    		<div class="logo-con w clearfix">
@@ -25,14 +41,28 @@
 	        		<span class="label hide"></span>
 	        		<div class="item-rcol">
 	        			<div class="item-input-wrap item-input-xl">
-	        				<input type="text" class="field" placeholder="请输入用户名/邮箱/已验证手机号" value="">
+	        				<input type="text" class="field" placeholder="请输邮箱" value="">
+	        				<ul class="suggest-container email-suggest" style="display: block;">
+	                        	<li class=""><div class="value">@qq.com</div></li>
+	                        	<li class=""><div class="value">@163.com</div></li>
+	                        	<li class=""><div class="value">@126.com</div></li>
+	                        	<li class=""><div class="value">@Gmail.com</div></li>
+	                        	<li class=""><div class="value">@Sohu.com</div></li>
+	                        	<li class="suggest-li-last "><div class="value">@Sina.com</div></li>
+	                        </ul>
 	        				<span class="i-ops">
 	        					<span class="i-cancel iconfont icon-delete" ></span>
 	        				</span>	        				
 	        			</div>
+<<<<<<< HEAD
 	        			<div class="input-tip input-error">
 	        				<i class="i-error iconfont icon-warn"></i>	        				
 	        				请输入用户名/邮箱/已验证手机号
+=======
+	        			<div class="input-error hide">
+	        				<i cite="i-error iconfont icon-warn"></i>
+	        				请输入邮箱
+>>>>>>> 271dcae21122f653ed16b4e8dea04876c78cdd18
 	        			</div>
 	        		</div>
 	        	</div>
