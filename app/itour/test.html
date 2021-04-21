@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<script src="../js/common/jquery-3.4.1.js.js"></script>
+	<script>
+		$(function(){
+			$("#input-btn").click(function(){
+				 var text =$("#input-text").val();
+				
+				 if(text){
+				 	console.log(true);
+				 	console.log(typeof text);
+				 }else{
+				 	console.log(typeof text);
+				 	console.log(false);
+				 }
+			})
+			
+		});
+		</script>
+	</head>
+	<body>
+		<input id="input-text">
+		<input id="input-btn" type="button" value="确定">
+			
+	</body>
+    
+	
+</html>
