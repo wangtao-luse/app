@@ -722,9 +722,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 .form-wrap .form-item {
     min-width: 400px;
-    min-height: 62px;
+    min-height: 70px;
     margin-bottom: 15px;
     border:none;
+
 }
 .form-wrap .form-item .item-rcol {
     display: block;
@@ -867,6 +868,7 @@ input[type="checkbox"], input[type="radio"] {
 .form-wrap .form-item .input-error .icon-warn {
     font-size: 16px;
     margin-right: 4px;
+    vertical-align: middle;
 }
 .form-wrap .form-item .icon-biyan, 
 .form-wrap .form-item .icon-delete,
