@@ -36,21 +36,11 @@
 			$(function(){
 				//获取指定元素在y轴上偏移量
 				var offsetTop = $(".contentItem-actions").offset().top;
-				console.log("offsetTop: "+offsetTop);
 				$(document).scroll(function() {
 					//https://www.cnblogs.com/yuqiandoudou/p/4436368.html
 					//1.获取垂直滚动的距离
 					  //scrollTop()==0的时候就是顶端了;
 					  //scrollTop()>=$(document).height()-$(window).height()  就可以知道已经滚动到底端了
-					var top = $(document).scrollTop()
-					//2.水平滚动条的距离
-					var left = $(document).scrollLeft();
-					//3.获取整个页面的高度
-					
-					//4.浏览器所能看到的页面的那部分的高度;
-					var wh = $(window).height(); 
-					
-					
 					
 					//获取垂直滚动的距离
 					var top = $(document).scrollTop();
@@ -59,8 +49,7 @@
 					//获取整个页面的高度
 					var dheight = $(document).height();
 					//计算到底部滚动的距离
-					var b = dheight -wheight-90;
-					console.log("top: "+top);
+					var b = dheight - wheight-90;
 					if(top<offsetTop){
 						$(".contentItem-actions").removeClass("is-fixed sticky")
 					}else if(top>=offsetTop&&top<=b){
