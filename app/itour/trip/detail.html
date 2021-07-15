@@ -1,13 +1,86 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="../../css/itour/common.css" />
 		<link rel="stylesheet" href="../../css/itour/index.css" />
-		<script type="text/javascript" src="../../js/common/jquery-3.4.1.js.js" ></script>
-		<script type="text/javascript" src="../../js/itour/index.js" ></script>
+		<script type="text/javascript" src="../../js/common/jquery-3.4.1.js.js"></script>
+		<script type="text/javascript" src="../../js/itour/index.js"></script>
+		<style>
+			.sticky.is-fixed {
+				position: fixed;
+				z-index: 2;
+				-webkit-font-smoothing: subpixel-antialiased;
+			}
+			
+			.sticky.is-absolute,
+			.sticky.is-fixed {
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			
+			.contentItem-actions.is-fixed {
+				margin: 0;
+				-webkit-box-shadow: 0 -1px 3px rgba(18, 18, 18, .1);
+				box-shadow: 0 -1px 3px rgba(18, 18, 18, .1);
+			}
+			
+			.richContent-actions.is-fixed {
+				-webkit-animation: slideInUp .2s;
+				animation: slideInUp .2s;
+			}
+		</style>
+		<script>
+			$(function(){
+				//获取指定元素在y轴上偏移量
+				var offsetTop = $(".contentItem-actions").offset().top;
+				console.log("offsetTop: "+offsetTop);
+				$(document).scroll(function() {
+					//https://www.cnblogs.com/yuqiandoudou/p/4436368.html
+					//1.获取垂直滚动的距离
+					  //scrollTop()==0的时候就是顶端了;
+					  //scrollTop()>=$(document).height()-$(window).height()  就可以知道已经滚动到底端了
+					var top = $(document).scrollTop()
+					//2.水平滚动条的距离
+					var left = $(document).scrollLeft();
+					//3.获取整个页面的高度
+					
+					//4.浏览器所能看到的页面的那部分的高度;
+					var wh = $(window).height(); 
+					
+					
+					
+					//获取垂直滚动的距离
+					var top = $(document).scrollTop();
+					//获取浏览器可见高度
+					var wheight = $(window).height();
+					//获取整个页面的高度
+					var dheight = $(document).height();
+					//计算到底部滚动的距离
+					var b = dheight -wheight-90;
+					console.log("top: "+top);
+					if(top<offsetTop){
+						$(".contentItem-actions").removeClass("is-fixed sticky")
+					}else if(top>=offsetTop&&top<=b){
+						$(".contentItem-actions").addClass("is-fixed sticky");
+						$(".is-fixed.sticky").css("width", $(".storyCard").outerWidth()+"px")
+						.css("left",$(".storyCard").offset().left+"px");
+						$(".is-fixed.sticky").css("bottom",0);
+					}else if(top>b){
+						$(".contentItem-actions").addClass("is-fixed sticky");
+						$(".is-fixed.sticky").css("width", $(".storyCard").outerWidth()+"px")
+						.css("left",$(".storyCard").offset().left+"px");
+						$(".is-fixed.sticky").css("bottom","90px");
+					}
+				});
+			})
+			
+		
+		</script>
 	</head>
+
 	<body>
 		<div id="itour-banner">
 			<div class="bnner-inside">
@@ -16,18 +89,28 @@
 						<a href="#"><img src="../../img/itour/common/itour-logo.png" /></a>
 					</div>
 					<ul class="banner-menus itour-banner-fl">
-						<li><a href="#" target="_blank">首页</a></li>
-						<li><a href="#" target="_blank">博客</a></li>
-						<li><a href="#" target="_blank">糖友</a></li>
-						<li><a href="#" target="_blank">寻觅佳人</a></li>
-						<li><a href="#" target="_blank">发现网站</a></li>
+						<li>
+							<a href="#" target="_blank">首页</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">博客</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">糖友</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">寻觅佳人</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">发现网站</a>
+						</li>
 					</ul>
 					<div class="banner-serach itour-banner-fl">
 						<div class="banner-serach-container">
-							<input type="text" class="banner-search-input" maxlength="100" autocomplete="off" placeholder="上海有那些好玩的地方"/>
-						<button type="button" class="banner-search-button"></button>
+							<input type="text" class="banner-search-input" maxlength="100" autocomplete="off" placeholder="上海有那些好玩的地方" />
+							<button type="button" class="banner-search-button"></button>
 						</div>
-						
+
 					</div>
 					<div class="banner-btns itour-banner-fr">
 						<div class="banner-btn banner-btn-write toolbar-subMenu-box itour-banner-fl">
@@ -36,82 +119,82 @@
 							</a>
 							<div class="toolbar-subMenu">
 								<a href="#">写博客</a>
-							    <a href="#">写攻略</a>
+								<a href="#">写攻略</a>
 							</div>
 						</div>
-					    <a href="#" target="_blank" class="banner-btn banner-btn-collect itour-banner-fl">收藏</a>
-					   <div class="banner-btn banner-btn-msg  itour-banner-fl">
-					   	 <div class="toolbar-subMenu-box">
-					   	 	  <a href="#" target="_blank">消息</a>
-						   	  <div class="toolbar-subMenu">
-						   	  	<a href="#">公告</a>
-						   	  	<a href="#">评论</a>
-						   	  	<a href="#">关注</a>
-						   	  	<a href="#">点赞</a>
-						   	  	<a href="#">私信</a>
-						   	  	<a href="#">回答</a>
-						   	  	<a href="#">系统通知</a>
-						   	  	<a href="#">消息设置</a>
-						     </div>
-					   	 </div>					   	 
-					   </div>
-					   <div class="banner-btn-login itour-banner-fl toolbar-subMenu-box" style="display: block;">
-					   	 <a class="hasAvatar" href="#"><img src="../../img/itour/common/avatar-1.jpg" /></a>
-					   	 <div class="toolbar-subMenu">
-					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-profile"></i>我的主页</a>
-					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-mp"></i>攻略管理</a>
-					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-blog"></i>我的博客</a>
-					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-account"></i>设置</a>
-					   	 	<a href="#" target="_blank"><i class="banner-icon banner-icon-logout"></i>退出</a>
-					   	 </div>
-					   </div>
-					   <div class="banner-btn-login itour-banner-fl" style="display: none;">
-					   	   <a class="" href="#">登录</a>
-					   	   <a class="" href="#">注册</a>
-					   </div>
+						<a href="#" target="_blank" class="banner-btn banner-btn-collect itour-banner-fl">收藏</a>
+						<div class="banner-btn banner-btn-msg  itour-banner-fl">
+							<div class="toolbar-subMenu-box">
+								<a href="#" target="_blank">消息</a>
+								<div class="toolbar-subMenu">
+									<a href="#">公告</a>
+									<a href="#">评论</a>
+									<a href="#">关注</a>
+									<a href="#">点赞</a>
+									<a href="#">私信</a>
+									<a href="#">回答</a>
+									<a href="#">系统通知</a>
+									<a href="#">消息设置</a>
+								</div>
+							</div>
+						</div>
+						<div class="banner-btn-login itour-banner-fl toolbar-subMenu-box" style="display: block;">
+							<a class="hasAvatar" href="#"><img src="../../img/itour/common/avatar-1.jpg" /></a>
+							<div class="toolbar-subMenu">
+								<a href="#" target="_blank"><i class="banner-icon banner-icon-profile"></i>我的主页</a>
+								<a href="#" target="_blank"><i class="banner-icon banner-icon-mp"></i>攻略管理</a>
+								<a href="#" target="_blank"><i class="banner-icon banner-icon-blog"></i>我的博客</a>
+								<a href="#" target="_blank"><i class="banner-icon banner-icon-account"></i>设置</a>
+								<a href="#" target="_blank"><i class="banner-icon banner-icon-logout"></i>退出</a>
+							</div>
+						</div>
+						<div class="banner-btn-login itour-banner-fl" style="display: none;">
+							<a class="" href="#">登录</a>
+							<a class="" href="#">注册</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="itour-main">
-	    	<div class="topstory">
-	    		<div class="topstory-container">
-	    			<div class="topstory-mainColunm">
-	    				<div class="topstory-content topstory-mainColumnCard">
-	    					<div class="card storyCard">
-	    						<div class="contentItem storyItem-isAnswer">
-	    							<div class="contentItem-meta">
-	    								<div class="authorInfo-wrap mb-1">
-	    									<a href="#" target="_blank" class="align-items-centers">
-	    										<span class="mr-2">
+			<div class="topstory">
+				<div class="topstory-container">
+					<div class="topstory-mainColunm">
+						<div class="topstory-content topstory-mainColumnCard">
+							<div class="card storyCard">
+								<div class="contentItem storyItem-isAnswer">
+									<div class="contentItem-meta">
+										<div class="authorInfo-wrap mb-1">
+											<a href="#" target="_blank" class="align-items-centers">
+												<span class="mr-2">
 	    											<img class="high-rank-use" src="../../img/itour/common/avatar-1.jpg" width="32" height="32" />
 	    										</span>
-		    									
-		    									<storng>爱旅行SHOW</storng>
-	    									</a>
-	    								</div>	    								
-	    							</div>
-	    							<h1 class="mb-1 h1">去上海旅游有什么推荐的地方?</h1>
-	    							<div class="article_tags">
-	    								<div class="tags">
-	    									<a href="#" class="tag article_tag">旅行</a>
-	    									<a href="#" class="tag article_tag">上海旅行攻略</a>
-	    									<a href="#" class="tag article_tag">周末去哪儿</a>
-	    								</div>
-	    								<div class="text-secondary">
-	    									阅读 1.1k
-	    									<span class="split-dot"></span>
-	    									<span class="datePublished">发布于 2020-12-1 12:30:50</span>
-	    								</div>
-	    								
-	    								
-	    							</div>
-	    							<article class="richContent">
-	    								<div class="richContent-inner">
-	    									主体内容
-	    								</div>
-	    								<div class="contentItem-actions sticky richContent-actions is-fixed is-bottom">
-	    									<button class="button contentItem-action button--plain button--withIcon button--withLabel">
+
+												<storng>爱旅行SHOW</storng>
+											</a>
+										</div>
+									</div>
+									<h1 class="mb-1 h1">去上海旅游有什么推荐的地方?</h1>
+									<div class="article_tags">
+										<div class="tags">
+											<a href="#" class="tag article_tag">旅行</a>
+											<a href="#" class="tag article_tag">上海旅行攻略</a>
+											<a href="#" class="tag article_tag">周末去哪儿</a>
+										</div>
+										<div class="text-secondary">
+											阅读 1.1k
+											<span class="split-dot"></span>
+											<span class="datePublished">发布于 2020-12-1 12:30:50</span>
+										</div>
+
+									</div>
+									<article class="richContent">
+										<div class="richContent-inner">
+											主体内容
+											雪花多呈六角形，花样之所以繁多，是因为冰的分子以六角形为最多，对于六角形片状冰晶来说，由于它面上、边上和角上 的曲率不同，相应地具有不同的饱和水汽压，其中角上的饱和水汽压最大，边上次之，平面上最小。在实有水汽压相同的情况下，由于冰晶各部分饱和水汽压不同，其凝华增长的情况也不相同。例如当实有水汽压仅大于平面的饱和水汽压时，水汽只在面上凝华，形成的是柱状雪花。当实有水汽压大于边上的饱和水汽压时，边上和面上都会发生凝华。由于凝华的速度还与曲率有关，曲率大的地方凝华较快，故在冰晶边上凝华比面上快，多形成片状雪花。当实有水汽压大于角上的饱和水汽压时，虽然面上、边上、角上都有水汽凝华，但尖角处位置突出。水汽供应最充分，凝华增长得最快，故多形成枝状或星状雪花。再加上冰晶不停地运动，它所处的温度和湿度条件也不断变化，这样就使得冰晶各部分增长的速度不一致，形成多种多样的雪花
+										</div>
+										<div class="contentItem-actions  richContent-actions is-bottom">
+											<button class="button contentItem-action button--plain button--withIcon button--withLabel">
 												<span style="display: inline-flex; align-items: center;">​
 												<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
 												<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">	
@@ -146,14 +229,15 @@
 												</span>
 												举报
 											</button>
-	    								</div>
-	    							</article>
-	    						</div>
-	    				
-	    					</div>
-	    				
-	    				</div>
-	    			    <div class="comments-container comment-container">
+										</div>
+										<div class="location-nav"></div>
+									</article>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="comments-container comment-container">
 							<div class="commentsV2 commentsV2--withEditor commentsV2-withPagination">
 								<div class="topbar commentTopbar">
 									<div class="topbar-title">
@@ -171,28 +255,28 @@
 								<div>
 									<div class="comment-box comment-edit-box">
 										<div class="user-img">
-											<img  class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
+											<img class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
 										</div>
-									    <form id="comment-form">
-									    	<textarea class="comment-content" id="comment_content" maxlength="1000"placeholder="快来写下你的评论..."></textarea>
-									    	<div class="opt-box">
-									    		<input type="hidden" id="comment_replyId" />
-									    		<input type="hidden" id="article_id" />
-									    		<input type="hidden" id="comment_userId" />
-									    		<input type="hidden" id="commentId" />
-									    		<div class="right-box">
-									    			<span id="tip_comment" class="tip">
+										<form id="comment-form">
+											<textarea class="comment-content" id="comment_content" maxlength="1000" placeholder="快来写下你的评论..."></textarea>
+											<div class="opt-box">
+												<input type="hidden" id="comment_replyId" />
+												<input type="hidden" id="article_id" />
+												<input type="hidden" id="comment_userId" />
+												<input type="hidden" id="commentId" />
+												<div class="right-box">
+													<span id="tip_comment" class="tip">
 									    				还能输入
 									    				<em>987</em>
 									    				个字符
-									    			</span>									    			
-									    			<a href="#">
-									    				<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
-									    			</a>
-									    		</div>
-									    		
-									    	</div>
-									    </form>
+									    			</span>
+													<a href="#">
+														<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
+													</a>
+												</div>
+
+											</div>
+										</form>
 									</div>
 								</div>
 								<div>
@@ -211,10 +295,10 @@
 																	</div>
 																</div>
 															</span>
-														    <span class="userLink">
+															<span class="userLink">
 														    	<a  class="userLink-link" href="#">王三天</a>
 														    </span>
-														    <span class="commentItemV2-time">2020-12-02</span>
+															<span class="commentItemV2-time">2020-12-02</span>
 														</div>
 														<div class="commentItemV2-metaSibling">
 															<div class="commentRichText commentItemV2-content">
@@ -235,7 +319,7 @@
 																	</span>
 																	回复
 																</button>
-																
+
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
@@ -246,43 +330,43 @@
 																	</span>
 																	举报
 																</button>
-																
+
 															</div>
-														    <div class="comment-box comment-edit-box">
+															<div class="comment-box comment-edit-box">
 																<div class="user-img">
-																	<img  class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
+																	<img class="avatar" src="../../img/itour/common/avatar-1.jpg" width="24" height="24">
 																</div>
-															    <form id="commentformNew">
-															    	<textarea class="comment-content" id="comment_contentNew" maxlength="1000"placeholder="回复：王天三"></textarea>
-															    	<div class="opt-box">
-															    		<input type="hidden" id="comment_replyIdNew" />
-															    		<input type="hidden" id="article_idNew" />
-															    		<input type="hidden" id="comment_userIdNew" />
-															    		<input type="hidden" id="commentIdNew" />
-															    		<div class="right-box right-box-new">
-															    			<span id="tip_commentNew" class="tip">
+																<form id="commentformNew">
+																	<textarea class="comment-content" id="comment_contentNew" maxlength="1000" placeholder="回复：王天三"></textarea>
+																	<div class="opt-box">
+																		<input type="hidden" id="comment_replyIdNew" />
+																		<input type="hidden" id="article_idNew" />
+																		<input type="hidden" id="comment_userIdNew" />
+																		<input type="hidden" id="commentIdNew" />
+																		<div class="right-box right-box-new">
+																			<span id="tip_commentNew" class="tip">
 															    				还能输入
 															    				<em>987</em>
 															    				个字符
-															    			</span>	
-															    			<input type="button" class="btn btn-sm btn-cancel" value="取消评论">
-															    			<a href="#">
-															    				<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
-															    			</a>
-															    		</div>
-															    		
-															    	</div>
-															    </form>
+															    			</span>
+																			<input type="button" class="btn btn-sm btn-cancel" value="取消评论">
+																			<a href="#">
+																				<input type="submit" class="btn btn-sm btn-comment" value="发表评论">
+																			</a>
+																		</div>
+
+																	</div>
+																</form>
 															</div>
 														</div>
 													</div>
 												</div>
 											</li>
-										    <li class="nestComment--child">
-										    	<div class="commentItemV2">
-										    		<div>
-										    			<div class="commentItemV2-meta">
-										    				<span class="userLink commentItemV2-avatar">
+											<li class="nestComment--child">
+												<div class="commentItemV2">
+													<div>
+														<div class="commentItemV2-meta">
+															<span class="userLink commentItemV2-avatar">
 										    					<div class="popover">
 										    						<div id="popover36-toggle">
 										    							<a href="#" class="userLink-link">
@@ -291,21 +375,21 @@
 										    						</div>
 										    					</div>
 										    				</span>
-										    				<span class="userLink">
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">芊芊左</a>
 										    				</span>
-										    				<span class="commentItemV2-reply">回复</span>
-										    				<span class="userLink">
+															<span class="commentItemV2-reply">回复</span>
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">王三天</a>
 										    				</span>
-										    				<span class="commentItemV2-time">2020-12-02</span>
-										    			</div>
-										    			<div class="commentItemV2-metaSibling">
-										    				<div class="commentRichText commentItemV2-content">
-										    					<div class="richText ztext">一个都不选岂不更好[惊喜]</div>
-										    				</div>
-										    				<div class="commentItemV2-footer">
-										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
+															<span class="commentItemV2-time">2020-12-02</span>
+														</div>
+														<div class="commentItemV2-metaSibling">
+															<div class="commentRichText commentItemV2-content">
+																<div class="richText ztext">一个都不选岂不更好[惊喜]</div>
+															</div>
+															<div class="commentItemV2-footer">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
 																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
 																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
@@ -317,22 +401,22 @@
 																	</span>
 																	回复
 																</button>
-																
+
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
 																	举报
 																</button>
-										    				</div>
-										    			</div>
-										    		</div>
-										    	</div>
-										    </li>
-										    <li class="nestComment--child">
-										    	<div class="commentItemV2">
-										    		<div>
-										    			<div class="commentItemV2-meta">
-										    				<span class="userLink commentItemV2-avatar">
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="nestComment--child">
+												<div class="commentItemV2">
+													<div>
+														<div class="commentItemV2-meta">
+															<span class="userLink commentItemV2-avatar">
 										    					<div class="popover">
 										    						<div id="popover36-toggle">
 										    							<a href="#" class="userLink-link">
@@ -341,21 +425,21 @@
 										    						</div>
 										    					</div>
 										    				</span>
-										    				<span class="userLink">
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">无人之境</a>
 										    				</span>
-										    				<span class="commentItemV2-reply">回复</span>
-										    				<span class="userLink">
+															<span class="commentItemV2-reply">回复</span>
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">王三天</a>
 										    				</span>
-										    				<span class="commentItemV2-time">12-02</span>
-										    			</div>
-										    			<div class="commentItemV2-metaSibling">
-										    				<div class="commentRichText commentItemV2-content">
-										    					<div class="richText ztext">都不要，要啥自行车[飙泪笑]</div>
-										    				</div>
-										    				<div class="commentItemV2-footer">
-										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
+															<span class="commentItemV2-time">12-02</span>
+														</div>
+														<div class="commentItemV2-metaSibling">
+															<div class="commentRichText commentItemV2-content">
+																<div class="richText ztext">都不要，要啥自行车[飙泪笑]</div>
+															</div>
+															<div class="commentItemV2-footer">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
 																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
 																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
@@ -367,22 +451,22 @@
 																	</span>
 																	回复
 																</button>
-																
+
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
 																	举报
 																</button>
-										    				</div>
-										    			</div>
-										    		</div>
-										    	</div>
-										    </li>
-										    <div>
-										    	<div class="commentMoreReplyButton">
-										    		<button type="button" class="button button--plain">查看全部 14 条回复</button>
-										    	</div>
-										    </div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<div>
+												<div class="commentMoreReplyButton">
+													<button type="button" class="button button--plain">查看全部 14 条回复</button>
+												</div>
+											</div>
 										</ul>
 										<ul class="nestComment">
 											<li class="nestComment--rootComment">
@@ -398,10 +482,10 @@
 																	</div>
 																</div>
 															</span>
-														    <span class="userLink">
+															<span class="userLink">
 														    	<a  class="userLink-link" href="#">王三天</a>
 														    </span>
-														    <span class="commentItemV2-time">12-02</span>
+															<span class="commentItemV2-time">12-02</span>
 														</div>
 														<div class="commentItemV2-metaSibling">
 															<div class="commentRichText commentItemV2-content">
@@ -422,23 +506,23 @@
 																	</span>
 																	回复
 																</button>
-																
+
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
 																	举报
 																</button>
 															</div>
-														 
+
 														</div>
 													</div>
 												</div>
 											</li>
-										    <li class="nestComment--child">
-										    	<div class="commentItemV2">
-										    		<div>
-										    			<div class="commentItemV2-meta">
-										    				<span class="userLink commentItemV2-avatar">
+											<li class="nestComment--child">
+												<div class="commentItemV2">
+													<div>
+														<div class="commentItemV2-meta">
+															<span class="userLink commentItemV2-avatar">
 										    					<div class="popover">
 										    						<div id="popover36-toggle">
 										    							<a href="#" class="userLink-link">
@@ -447,21 +531,21 @@
 										    						</div>
 										    					</div>
 										    				</span>
-										    				<span class="userLink">
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">芊芊左</a>
 										    				</span>
-										    				<span class="commentItemV2-reply">回复</span>
-										    				<span class="userLink">
+															<span class="commentItemV2-reply">回复</span>
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">王三天</a>
 										    				</span>
-										    				<span class="commentItemV2-time">2020-12-02</span>
-										    			</div>
-										    			<div class="commentItemV2-metaSibling">
-										    				<div class="commentRichText commentItemV2-content">
-										    					<div class="richText ztext">一个都不选岂不更好[惊喜]</div>
-										    				</div>
-										    				<div class="commentItemV2-footer">
-										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
+															<span class="commentItemV2-time">2020-12-02</span>
+														</div>
+														<div class="commentItemV2-metaSibling">
+															<div class="commentRichText commentItemV2-content">
+																<div class="richText ztext">一个都不选岂不更好[惊喜]</div>
+															</div>
+															<div class="commentItemV2-footer">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
 																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
 																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
@@ -473,22 +557,22 @@
 																	</span>
 																	回复
 																</button>
-																
+
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
 																	举报
 																</button>
-										    				</div>
-										    			</div>
-										    		</div>
-										    	</div>
-										    </li>
-										    <li class="nestComment--child">
-										    	<div class="commentItemV2">
-										    		<div>
-										    			<div class="commentItemV2-meta">
-										    				<span class="userLink commentItemV2-avatar">
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="nestComment--child">
+												<div class="commentItemV2">
+													<div>
+														<div class="commentItemV2-meta">
+															<span class="userLink commentItemV2-avatar">
 										    					<div class="popover">
 										    						<div id="popover36-toggle">
 										    							<a href="#" class="userLink-link">
@@ -497,21 +581,21 @@
 										    						</div>
 										    					</div>
 										    				</span>
-										    				<span class="userLink">
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">无人之境</a>
 										    				</span>
-										    				<span class="commentItemV2-reply">回复</span>
-										    				<span class="userLink">
+															<span class="commentItemV2-reply">回复</span>
+															<span class="userLink">
 										    					<a  class="userLink-link" href="#">王三天</a>
 										    				</span>
-										    				<span class="commentItemV2-time">12-02</span>
-										    			</div>
-										    			<div class="commentItemV2-metaSibling">
-										    				<div class="commentRichText commentItemV2-content">
-										    					<div class="richText ztext">都不要，要啥自行车[飙泪笑]</div>
-										    				</div>
-										    				<div class="commentItemV2-footer">
-										    					<button type="button" class="button commentItemV2-likeBtn button--plain">
+															<span class="commentItemV2-time">12-02</span>
+														</div>
+														<div class="commentItemV2-metaSibling">
+															<div class="commentRichText commentItemV2-content">
+																<div class="richText ztext">都不要，要啥自行车[飙泪笑]</div>
+															</div>
+															<div class="commentItemV2-footer">
+																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span style="display: inline-flex; align-items: center;vertical-align: top;">
 																		<img class="isdefault" src="../../img/itour/common/tobarThumbUp.png" width="22" height="22">
 																		<img class="isactive" src="../../img/itour/common/tobarThumbUpactive.png" width="22" height="22" style="display: none;">
@@ -523,22 +607,22 @@
 																	</span>
 																	回复
 																</button>
-																
+
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
 																	举报
 																</button>
-										    				</div>
-										    			</div>
-										    		</div>
-										    	</div>
-										    </li>
-										    <div>
-										    	<div class="commentMoreReplyButton">
-										    		<button type="button" class="button button--plain">查看全部 14 条回复</button>
-										    	</div>
-										    </div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<div>
+												<div class="commentMoreReplyButton">
+													<button type="button" class="button button--plain">查看全部 14 条回复</button>
+												</div>
+											</div>
 										</ul>
 										<ul class="nestComment">
 											<li class="nestComment--rootCommentNoChild">
@@ -554,10 +638,10 @@
 																	</div>
 																</div>
 															</span>
-														    <span class="userLink">
+															<span class="userLink">
 														    	<a  class="userLink-link" href="#">王三天</a>
 														    </span>
-														    <span class="commentItemV2-time">9小时前</span>
+															<span class="commentItemV2-time">9小时前</span>
 														</div>
 														<div class="commentItemV2-metaSibling">
 															<div class="commentRichText commentItemV2-content">
@@ -578,15 +662,15 @@
 																	</span>
 																	回复
 																</button>
-																
+
 																<button type="button" class="button commentItemV2-likeBtn button--plain">
 																	<span>
 																	</span>
 																	举报
 																</button>
-																
+
 															</div>
-														    
+
 														</div>
 													</div>
 												</div>
@@ -594,38 +678,37 @@
 										</ul>
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
-	    			</div>
-	    			<div class="globalSideBar">
-	    				<div class="card wechat-follow-wrap">
-			   	 	     	<div class="wechat-follow-title">
-			   	 	     		<span>
+					</div>
+					<div class="globalSideBar">
+						<div class="card wechat-follow-wrap">
+							<div class="wechat-follow-title">
+								<span>
 			   	 	     			<img class="wechat-icon" src="../../img/itour/common/wechat_icon.png" height="18" />
 			   	 	     			微信关注
 			   	 	     		</span>
-			   	 	     		
-			   	 	     	</div>
-			   	 	     	<div class="wechat-follow-con">
-			   	 	     		<img src="../../img/itour/common/qrcode.jpg" class="wechat-scan" width="96" />
-			   	 	     			"爱旅行SHOW",提供最优旅行攻略，让旅行变得简单,	 有趣！			   	 	     		
-			   	 	     	</div>
-			   	 	     </div>
-	    			</div>
-	    		</div>
-		    </div>
-	    </div>	
-	    <footer id="footer">
-	    	<div class="container">
-	    		<div class="copyright">
-	    			Copyright © 2011-2020 爱旅行SHOW<br>
-	    		<a href="http://beian.miit.gov.cn" rel="nofollow">湘ICP备2020018917号</a>
-	    		</div>
-	    		
-	    	</div>
-	    	
-	    	
-	    </footer>
+
+							</div>
+							<div class="wechat-follow-con">
+								<img src="../../img/itour/common/qrcode.jpg" class="wechat-scan" width="96" /> "爱旅行SHOW",提供最优旅行攻略，让旅行变得简单, 有趣！
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="container">
+				<div class="copyright">
+					Copyright © 2011-2020 爱旅行SHOW<br>
+					<a href="http://beian.miit.gov.cn" rel="nofollow">湘ICP备2020018917号</a>
+				</div>
+
+			</div>
+
+		</footer>
 	</body>
+
 </html>

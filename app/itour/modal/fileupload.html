@@ -28,19 +28,43 @@
 					console.log(options);
 					$('.vicp-drop-area input').on("change",upload);
 					function upload(){
-						fr = new FileReader();
-						var file = $(".upload-area .vicp-drop-area input")[0].files[0];
-						fr.readAsDataURL(file);
-				    	fr.onload = function (e) {
-				    		$(".vicp-img-container img").attr("src",e.target.result);
-				    		$(".vicp-crop-right .vicp-preview-item-circle img").attr("src",e.target.result);
-                    		console.log(e.target.result)
-                   		};
+					    fileReader();
                    		$(".vicp-close").next().hide();
 						$(".vicp-step1").prev().show();
 						$(".vicp-step1").hide();
 						$(".modi_dialog").find(".vicp-wrap").addClass("maxwrap");
 						$(".vicp-step2").show();
+					}
+					function fileReader(){
+					    var reader = new FileReader();
+						reader.readAsDataURL($("input[type='file']")[0].files[0]);
+						reader.onload = function(e){
+							$(".vicp-img-container img").attr("src",e.target.result);
+							$(".vicp-crop-right .vicp-preview-item-circle img").attr("src",e.target.result);
+							var path = e.target.result;
+							//console.log(e.target.result);
+						    drawImage(path);
+					     }
+				   }
+					function drawImage(path){
+						var c = document.getElementById('canvas');
+						var ctx = c.getContext("2d");
+						var img = new Image();
+				            img.src = path;
+				            img.onload = function(){
+				            	var sx="0";//开始剪切的 x 坐标位置
+				            	var sy="0";//开始剪切的 y 坐标位置
+				            	var swidth=img.width;//被剪切图像的宽度
+				            	var sheight=img.height;//被剪切图像的高度
+				            	var x="0";//在画布上放置图像的 x 坐标位置
+				            	var y="0";//在画布上放置图像的 y 坐标位置
+				            	var width=img.width;//要使用的图像的宽度
+				            	var height=img.width;//要使用的图像的高度
+				            	ctx.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
+				            	var url =c.toDataURL();
+				            	console.log(url);
+				            	$(".vicp-crop-right .vicp-preview-item-circle img").attr("src",url);
+				            }
 					}
 					
 				}				 
@@ -54,8 +78,10 @@
 						height:'200'});
 			});
 			
-			
-			
+			$(document).on("click",".modi_dialog .vicp-close,.vicp-step1 .vicp-operate a",function(){
+				$(".modi_dialog").hide();
+			});
+					
 			
 			
 			
@@ -320,7 +346,7 @@
 					<h3 class="upword">上传图像</h3>
 					<h3 class="upword" style="display: none;">修改图像</h3>
 					<div class="vicp-step1" >
-						<div class="vicp-drop-area">
+						<div class="vicp-drop-area" style="dragable:true">
 							<img src="../../img/itour/common/upload.png" class="vicp-icon1" />
 							<span class="vicp-hint">点击或拖动图片至此处</span>
 							<input type="file" style="display: none;" />
@@ -331,10 +357,10 @@
 					</div>
 					<p class="img_tip1">图片宽度*高度至少为150*150像素，大小不超过2MB</p>
 					<div class="vicp-step2" style="display: none;" >
-						<div class="vicp-crop">
+						<div class="vicp-crop" style="dragable:true">
 							<div class="vicp-crop-left">
 								<div class="vicp-img-container">
-									<img src="../../img/itour/common/avatar-3.jpg"  class="vicp-img"  style="top: 0px; left: -20.7059px; width: 281.412px; height: 184px;" />
+									<img src="../../img/itour/common/avatar-3.jpg"  class="vicp-img"  style="" />
 								</div>
 								<div class="vicp-range">
 									<input type="range" step="1" min="0" max="100" />
@@ -356,6 +382,7 @@
 							<a class="vicp-operate-btn">上传并保存</a>
 						</div>
 					</div>
+				     <canvas id="canvas" height="150" width="150" style="display: none;"></canvas>
 				</div>
 			</div>
 		</div>

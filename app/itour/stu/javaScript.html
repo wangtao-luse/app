@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		 var path="http://localhost:9093/itour/uploaded\10031\y2021\May\3b2cd08ae2f24d939c4e266b73302481.png";
+		 var p = path.replace(/\\/g,"/");
+		 console.log(p);
+	</script>
+	<script>
+var num=22.25;
+console.log( Math.round(num*1000)/1000);
+console.log(num.toFixed(3));
+</script>
+<script>
+	//保留指定小数位数(保留小数后3位)
+	//https://www.jb51.net/article/134067.htm
+	function keepThreeDecimalFull(num) {
+        	 var result = parseFloat(num);
+        	 /**四舍五入**/
+        	 result = Math.round(num * 1000) / 1000; 
+        	  /**不四舍五入
+        	 result = Math.floor(num * 1000) / 1000;
+        	 **/
+        	 var s_x = result.toString();      
+        	 var pos_decimal = s_x.indexOf('.');2
+        	 if (pos_decimal < 0) {
+        	 pos_decimal = s_x.length;
+        	 s_x += '.';
+        	 }
+        	 while (s_x.length <= pos_decimal + 3) {
+        	 s_x += '0';
+        	 }
+        	 return s_x;
+        	}
+	var v = keepThreeDecimalFull(12.89);
+	console.log(v);
+</script>
+	<body>
+	</body>
+</html>
