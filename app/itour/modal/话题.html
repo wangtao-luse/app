@@ -15,7 +15,10 @@
 				});
 				$("#article_collect").click(function(){
 					$("#article_collect+div.modal-wrapper").show();
-				})
+				});
+				$("#dialog-confirm").click(function(){
+					$("#dialog-confirm+div.modal-wrapper").show();
+				});
 				
 			})
 		</script>
@@ -227,6 +230,7 @@
 		 					</div>
 		 					<div class="favlists-actions">
 		 						<button type="button" class="button favlists-addButton button--primary button--blue">创建收藏夹</button>
+		 						<button type="button" class="button favlists-addButton button--primary button--blue">确定</button>
 		 					</div>
 		 				</div>
 		 			</div>
@@ -286,6 +290,32 @@
 		 		<button type="button" class="button modal-closeButton button--plain">
 		 			<svg class="Zi Zi--Close Modal-closeIcon" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M13.486 12l5.208-5.207a1.048 1.048 0 0 0-.006-1.483 1.046 1.046 0 0 0-1.482-.005L12 10.514 6.793 5.305a1.048 1.048 0 0 0-1.483.005 1.046 1.046 0 0 0-.005 1.483L10.514 12l-5.208 5.207a1.048 1.048 0 0 0 .006 1.483 1.046 1.046 0 0 0 1.482.005L12 13.486l5.207 5.208a1.048 1.048 0 0 0 1.483-.006 1.046 1.046 0 0 0 .005-1.482L13.486 12z" fill-rule="evenodd"></path></svg>
 		 		</button>
+		 	</div>
+		 </div>
+		 
+		 <button type="button" id="dialog-confirm">确认框</button>
+		 <div class="modal-wrapper undefined modal-enter-done" style="display: none;">
+		 	<div class="modal-backdrop"></div>
+		 	<div class="modal modal--default css-comfirm" tabindex="0">
+		 		<div class="modal-inner">
+		 			<div class="modal-content">
+		 				<div class="css-confirm-ctn">
+		 					<div class="css-title-cofirm">删除收藏夹</div>
+		 					<div class="css-comfirm-tip">
+		 						<div class="collectionsDeleteButton">
+		 							你确认要删除这个收藏夹吗？
+		 							<span class="collectionsDeleteButton-hint">
+		 								删除收藏夹后，里面收藏的内容也一并删除
+		 							</span>
+		 						</div>
+		 					</div>
+		 					<div class="css-comfirm-bottom">
+		 						<button type="button" class="button css-mr4">取消</button>
+		 						<button type="button" class="button button--primary button--blue">确认</button>
+		 					</div>
+		 				</div>
+		 			</div>
+		 		</div>
 		 	</div>
 		 </div>
 	</body>
